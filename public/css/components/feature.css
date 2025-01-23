@@ -1,0 +1,30 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+
+    svg {
+        width: 7rem;
+        height: 7rem;
+        padding: 1.5rem;
+        stroke: var(--primary-color);
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+    }
+}
+
+.feature--left {
+    text-align: left;
+}
+
+.feature__text {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+
+.feature__text--num {
+    font-size: 4.5rem;
+}

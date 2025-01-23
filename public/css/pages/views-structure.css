@@ -1,0 +1,63 @@
+/* EQUIP */
+.equip__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+
+@media (max-width: 53.125em) {
+    .equip__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* PROJECTS */
+.project__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 53.125em) {
+    .project__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROJECTES DETALL */
+.pilars__grid, .random__grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.pilars__grid > div, .random__grid > div {
+    flex: 1;
+}
+
+@media (max-width: 53.125em) {
+    .pilars__grid, .random__grid {
+        flex-direction: column;
+    }
+}
+
+/* COL·LABORA */
+.colabora-donacio {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.colabora__flex {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+@media (max-width: 53.125em) {
+    .colabora__flex {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}

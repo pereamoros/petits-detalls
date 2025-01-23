@@ -1,0 +1,54 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirigir HTTP a HTTPS
+    # RewriteCond %{SERVER_PORT} !^443$
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirigir petitsdetalls.org a www.petitsdetalls.org
+    RewriteCond %{HTTP_HOST} ^petitsdetalls.org$
+    RewriteRule (.*) https://www.petitsdetalls.org/$1 [R=301,L]
+
+    # Eliminar barra final de las URIs que no son directorios
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Redirigir solicitudes específicas a archivos específicos
+    # RewriteRule ^equip$ templates/equipo.php [NC,L]
+
+    # Redirigir todas las solicitudes al directorio public
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Redirigir todas las demás solicitudes a index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /public/index.php [L]
+</IfModule>
+
+# Proteger archivos sensibles (.htaccess, .env)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Añadir cabeceras de seguridad HTTP
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Restringir métodos HTTP permitidos
+<LimitExcept GET POST>
+    Deny from all
+</LimitExcept>
+
+# Configurar Content Security Policy (CSP)
+<IfModule mod_headers.c>
+    # Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';"
+</IfModule>
