@@ -1,0 +1,28 @@
+# Ignorar archivos específicos
+Thumbs.db
+.DS_Store
+
+# Ignorar carpetas
+cache/
+logs/
+
+# Ignorar archivos de configuración (si contienen información sensible)
+config/database.php 
+# Si tienes otros archivos de configuración con información sensible, añádelos aquí.
+
+# Ignorar archivos de desarrollo
+*.log
+*.tmp
+
+# Ignorar archivos de Visual Studio Code
+.vscode/
+
+# Ignorar archivos de caché del navegador
+*.cache
+
+# Ignorar archivos de sesión
+sess_*
+
+# Ignorar archivos y carpetas de Composer
+vendor/
+# composer.lock

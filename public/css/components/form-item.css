@@ -75,6 +75,11 @@
         font-size: var(--sm-font-size);
     }
 
+    input[type="checkbox"]:active, input[type="checkbox"]:focus, input[type="checkbox"]:focus-visible{
+        outline: none;
+        box-shadow: initial;
+    }
+
     &[data-type="submit"] {
         align-items: center;
         justify-content: center;
