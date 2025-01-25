@@ -1,6 +1,48 @@
 <?php
     include_once "../dades/menu.php";
     include_once "../dades/soci.php";
+
+    $email = 'ES1700810423870001144920';
+    if(validarIBAN($email)) {
+        echo 'vàlid<br>';
+    } else {
+        echo 'fallaste<br>';
+    }
+?>
+<?php
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuración del servidor SMTP (reemplaza con tus datos)
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;
+        $mail->isSMTP();
+        $mail->Host       = $_ENV['MAIL_HOST'];
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $_ENV['MAIL_USERNAME'];
+        $mail->Password   = $_ENV['MAIL_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = $_ENV['MAIL_PORT'];
+
+        // Remitente
+        $mail->setFrom($_ENV['MAIL_FROM_EMAIL'], $_ENV['MAIL_FROM_NAME']);
+        // Destinatario
+        $mail->addAddress($_ENV['MAIL_TO_EMAIL'], $_ENV['MAIL_TO_NAME']);
+
+        // Contenido
+        $mail->isHTML(true);
+        $mail->Subject = 'Prueba de email con PHPMailer';
+        $mail->Body    = 'Este es un email de prueba enviado desde PHPMailer.';
+
+        // $mail->send();
+        echo 'Mensaje enviado correctamente';
+    } catch (Exception $e) {
+        echo "Error al enviar el mensaje: {$mail->ErrorInfo}";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -97,13 +139,18 @@
                     <div class="form-item-container">
                         <div class="form-item" data-type="checkbox">
                             <input type="checkbox" name="accept" id="form-accept" required/>
-                            <label for="form-accept">* He llegit i accepto la <a href="#">política de privacitat</a> de Petits Detalls</label>
+                            <label for="form-accept">* He llegit i accepto la <a href="#" target="_blank">política de privacitat</a> de Petits Detalls</label>
                         </div>
 
                         <div class="form-item" data-type="checkbox">
                             <input type="checkbox" name="news" id="form-news"/>
                             <label for="form-news">Vull rebre notícies sobre els projectes de Petits Detalls</label>
                         </div>
+                    </div>
+
+                    <div class="form-item-container u-justify-center">
+                        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                        <div class="g-recaptcha" data-sitekey="6LcTLtokAAAAAED6gcZL4JAAUtJhKmDeVu_0_rrg"></div> -->
                     </div>
 
                     <div class="form-item-container">

@@ -1,4 +1,10 @@
 <?php
+require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__. '/..');
+$dotenv->load();
+
+require_once '../includes/functions.php';
+
 $request = $_SERVER['REQUEST_URI'];
 $routes = [
     '' => ['view' => 'home.php', 'idioma' => 'cat', 'correspondencies' => ['/', '/es']],
