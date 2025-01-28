@@ -1,13 +1,32 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.form-item-container {
+    display: flex;
+    gap: 2rem;
+}
+
 .form-item {
     display: flex;
     flex-direction: column;
     gap: .625rem;
     width: 100%;
 
+    a {
+        text-decoration: underline;
+    }
+
     label {
         font-size: 1.125rem;
         font-weight: 700;
         color: var(--text-color);
+        line-height: 1;
     }
 
     input, textarea, select {
@@ -87,18 +106,18 @@
 
 }
 
-
-.form-container {
+#post-response {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.form-item-container {
-    display: flex;
-    gap: 2rem;
+.form-response {
+    width: 50%;
+    background-color: var(--color-white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 @media (max-width: 53.125em) {

@@ -1,9 +1,5 @@
 <?php
-require '../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__. '/..');
-$dotenv->load();
-
-require_once '../includes/functions.php';
+require_once __DIR__ .'/../config/config.php'; 
 
 $request = $_SERVER['REQUEST_URI'];
 $routes = [
@@ -45,10 +41,11 @@ if (array_key_exists($request, $routes)) {
         $correspondencies = $route['correspondencies'];
     }
 
-    require __DIR__ . '/../views/'. $route['view'];
+    require BASE_PATH.'/views/'. $route['view'];
 
 } else {
     http_response_code(404);
-    require __DIR__ . '/../views/404.php';
+    require BASE_PATH.'/views/404.php';
+    exit;
 }
 ?>

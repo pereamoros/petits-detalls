@@ -1,6 +1,6 @@
 <?php
-    include_once "../dades/menu.php";
-    include_once "../dades/equip.php";
+    include_once BASE_PATH.'/dades/menu.php';
+    include_once BASE_PATH.'/dades/equip.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,15 +12,12 @@
     <meta name="keywords" content="">
     <meta name="author" content="Petits Detalls">
     
-    <!-- <link rel="icon" href="img/favicon.ico"> -->
-    <link rel="stylesheet" href="css/main.css">
+    <? include_once BASE_PATH.'/includes/head.php'; ?>
 
 </head>
 <body>
 
-    <?
-        include_once '../views/partials/header.php';
-    ?>
+    <? include_once BASE_PATH.'/views/partials/header.php'; ?>
     
     <main>
         <section class="hero-img">
@@ -57,8 +54,6 @@
         </section>
     </main>
 
-    <?
-        include_once '../views/partials/footer.php';
-    ?>
+    <? include_once BASE_PATH.'/views/partials/footer.php'; ?>
 </body>
 </html>

@@ -1,6 +1,4 @@
-<?
-    include_once '../dades/footer.php';
-?>
+<? include_once BASE_PATH.'/dades/footer.php'; ?>
 
 <footer>
     <div class="donacio">

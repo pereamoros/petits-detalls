@@ -1,6 +1,6 @@
 <?php
 
-function validarDNIoNIE($dni) {
+function validarDNI($dni) {
     $dni = strtoupper(str_replace(array(' ', '-'), '', $dni)); // Eliminar espacios y guiones, convertir a mayúsculas
   
     if (strlen($dni) != 9) {

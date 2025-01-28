@@ -1,9 +1,9 @@
 <?php
     $url_projecte = $request;
     $projecte_detall = ltrim($correspondencies[0], "/");
-    include_once "../dades/menu.php";
-    include_once "../dades/projectes.php";
-    include_once "../dades/projectes/$projecte_detall.php";
+    include_once BASE_PATH.'/dades/menu.php';
+    include_once BASE_PATH.'/dades/projectes.php';
+    include_once BASE_PATH.'/dades/projectes/'.$projecte_detall.'.php';
 
     // text constants
     if($idioma == "cat") {
@@ -23,15 +23,12 @@
     <meta name="keywords" content="">
     <meta name="author" content="Petits Detalls">
     
-    <!-- <link rel="icon" href="img/favicon.ico"> -->
-    <link rel="stylesheet" href="css/main.css">
+    <? include_once BASE_PATH.'/includes/head.php'; ?>
 
 </head>
 <body>
 
-    <?
-        include_once '../views/partials/header.php';
-    ?>
+    <? include_once BASE_PATH.'/views/partials/header.php'; ?>
     <main>
         <section class="hero-video">
             <div class="container">
@@ -120,8 +117,6 @@
             </section>
         </article>                    
     </main>
-    <?
-        include_once '../views/partials/footer.php';
-    ?>
+    <? include_once BASE_PATH.'/views/partials/footer.php'; ?>
 </body>
 </html>

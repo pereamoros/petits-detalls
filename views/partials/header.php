@@ -1,6 +1,3 @@
-<?php
-    // include_once "../dades/menu.php";
-?>
 <header>
 
     <div class="header__content">

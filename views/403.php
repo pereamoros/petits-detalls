@@ -2,8 +2,8 @@
     // print errors
     ini_set('display_errors', 1);
 
-    define('NOTFOUND_BASE_PATH', __DIR__ . '/..');
-    require_once NOTFOUND_BASE_PATH . '/config/config.php'; 
+    define('FORBIDDEN_BASE_PATH', __DIR__ . '/..');
+    require_once FORBIDDEN_BASE_PATH . '/config/config.php'; 
 
     if(!isset($idioma)) { $idioma = 'cat'; }
     include_once BASE_PATH."/dades/menu.php";
@@ -22,13 +22,13 @@
 
 </head>
 <body>
-
     <? include_once BASE_PATH.'/views/partials/header.php'; ?>
+    
     <main>
         <section>
             <div class="container">
-                <h1>error 404</h1>
-                <p>La pàgina que busques no existeix.</p>
+                <h1>error 403</h1>
+                <p>Forbidden. No tienes autorización para ver esta página.</p>
                 <a href="/">Tornar a la pàgina principal</a>
             </div>
         </section>
