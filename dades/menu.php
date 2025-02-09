@@ -40,7 +40,7 @@
         $menu_soci_url = '/fes-te-soci';
         $menu_donacions_name = 'Donacions puntuals';
         $menu_donacions_title = 'Donacions puntuals a Petits Detalls';
-        $menu_donacions_url = '/donacions-puntuals';
+        $menu_donacions_url = LINK_DONACIONS;
         $menu_colaboracions_name = 'Col·laboracions';
         $menu_colaboracions_title = 'Col·laboracions amb Petits Detalls';
         $menu_colaboracions_url = '/collaboracions';
@@ -87,7 +87,7 @@
         $menu_soci_url = '/hazte-socio';
         $menu_donacions_name = 'Donaciones puntuales';
         $menu_donacions_title = 'Donaciones puntuales a Petits Detalls';
-        $menu_donacions_url = '/donaciones-puntuales';
+        $menu_donacions_url = LINK_DONACIONS;
         $menu_colaboracions_name = 'Colaboraciones';
         $menu_colaboracions_title = 'Colaboraciones con Petits Detalls';
         $menu_colaboracions_url = '/colaboraciones';

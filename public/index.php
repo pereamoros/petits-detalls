@@ -24,8 +24,13 @@ $routes = [
     '/colabora' => ['view' => 'collabora.php', 'idioma' => 'esp', 'correspondencies' => ['/collabora', '/colabora']],
     '/fes-te-soci' => ['view' => 'soci.php', 'idioma' => 'cat', 'correspondencies' => ['/fes-te-soci', '/hazte-socio']],
     '/hazte-socio' => ['view' => 'soci.php', 'idioma' => 'esp', 'correspondencies' => ['/fes-te-soci', '/hazte-socio']],
-    '/collaboracions' => ['view' => 'collaboracions.php', 'idioma' => 'cat', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
-    '/colaboraciones' => ['view' => 'collaboracions.php', 'idioma' => 'esp', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
+    '/collaboracions' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
+    '/contacto' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/contacte', '/contacto']],
+    '/publicacions' => ['view' => 'publicacions.php', 'idioma' => 'cat', 'correspondencies' => ['/publicacions', '/publicaciones']],
+    '/publicaciones' => ['view' => 'publicacions.php', 'idioma' => 'esp', 'correspondencies' => ['/publicacions', '/publicaciones']],
+    '/colaboraciones' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
+    '/contacte' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/contacte', '/contacto']]
+
 
 ];
 $idioma = 'cat';

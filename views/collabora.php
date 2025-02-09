@@ -30,17 +30,18 @@
             <div class="container">
 
                 <div class="colabora-donacio">
-                    <h3>Pots fer una donació a:</h3>
-                    <p><b>ES98 2100 0423 9702 0037 2970</b> (La Caixa)<br/> BIZUM: <b>33591</b></p>
+                    <h3><?=$t_donacio_h3?></h3>
+                    <p><?=$t_donacio_p?></p>
                 </div>
 
-
                 <div class="colabora__flex">
-                    <?php foreach($colabora_flex as $colabora_item) { ?>
+                    <?php foreach($colabora_flex as $colabora_item) { 
+                        (esEnlaceExterno($colabora_item['cta-link'])) ? $link_target = ' target="_blank"' : $link_target = ""; 
+                    ?>
                         <div class="text-card">
                             <h2><?=$colabora_item['h2']?></h2>
                             <div class="text-card__text"><?=$colabora_item['text']?></div>
-                            <a class="cta <?=$colabora_item['cta-class']?>" href="<?=$colabora_item['cta-link']?>"><?=$colabora_item['cta-text']?></a>
+                            <a class="cta <?=$colabora_item['cta-class']?>" href="<?=$colabora_item['cta-link']?>"<?=$link_target?>><?=$colabora_item['cta-text']?></a>
                         </div>
                     <? } ?>
                 </div>

@@ -121,7 +121,7 @@
 }
 
 @media (max-width: 53.125em) {
-    .form-container {
+    .form-container, .form-response {
         width: 100%;
     }
     .form-item-container {

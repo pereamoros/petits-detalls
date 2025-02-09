@@ -26,36 +26,35 @@
 
         if($atributos['success'] == 1 && $atributos['score'] >= 0.5) {
             
-            $error_message = "";
+            $error_message = [];
             $form_name = htmlspecialchars(trim($_POST['name']));
-            $form_dni = strtoupper(str_replace(array(' ', '-'), '', $_POST['dni'])); // Para DNI, eliminar espacios y guiones, convertir a mayúsculas
+            $form_dni = strtoupper(str_replace(array(' ', '-'), '', $_POST['dni']));
             $form_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-            $form_telefon = filter_var($_POST['telefon'], FILTER_SANITIZE_NUMBER_INT); // Solo números para teléfono
+            $form_telefon = htmlspecialchars(trim($_POST['telefon']));
             $form_direccio = htmlspecialchars(trim($_POST['direccio']));
-            $form_iban = strtoupper(str_replace(' ', '', $_POST['iban'])); // Para IBAN, eliminar espacios y convertir a mayúsculas
+            $form_iban = strtoupper(str_replace(' ', '', $_POST['iban']));
             $form_cuota = htmlspecialchars($_POST['cuota']);
-            $form_import = filter_var($_POST['importe'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION); // Permitir decimales para importes
+            $form_import = filter_var($_POST['importe'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
             $form_missatge = htmlspecialchars(trim($_POST['missatge']));
             $form_news = $_POST['news'];
             $idioma = $_POST['idioma'];
     
             // Text
+            $t_error3 = "Error";
             $t_missatge = "L'usuari no ha enviat cap missatge";
             if($idioma === 'cat') {
-                $t_politica = "Accepta la política de privacitat de Petits Detalls";
                 $t_dni = "El DNI insertat no és vàlid.";
                 $t_email = "L'email insertat no és vàlid.";
                 $t_success = "Missatge enviat correctament";
                 $t_error = "Error a l'enviar el missatge:";
-                $t_error2 = "Si l'error persisteix, siusplau contacteu a info@petitsdetalls.org";
+                $t_error2 = "Reviseu les dades insertades. Si l'error persisteix, contacteu a info@petitsdetalls.org";
                 $t_error3 = "Hi ha hagut un error inesperat. Refresqueu la pàgina i torneu-ho a provar.";
             } else if($idioma === 'esp') {
-                $t_politica = "Acepta la política de privacidad de Petits Detalls";
                 $t_dni = "El DNI insertado no es válido.";
                 $t_email = "El email insertado no es válido.";
                 $t_success = "Mensaje enviado correctamente";
                 $t_error = "Error al enviar el mensaje:";
-                $t_error2 = "Si el error persiste, porfavor contactad a info@petitsdetalls.org";
+                $t_error2 = "Revisad los datos insertados. Si el error persiste, contactad a info@petitsdetalls.org";
                 $t_error3 = "Ha habido un error inesperado. Refresque la página e intentelo de nuevo.";
             }
     
@@ -64,10 +63,10 @@
     
             // Validació
             if(!validarDNI($form_dni)) {
-                $error_message.= $t_dni.'<br>';
+                $error_message[]= $t_dni;
             }
             if(!validarEmail($form_email)) {
-                $error_message.= $t_email.'<br>';
+                $error_message[]= $t_email;
             }
             
             if(empty($error_message)) {
@@ -92,6 +91,7 @@
                     // Contenido
                     $mail->isHTML(true);
                     $mail->CharSet = 'UTF-8';
+                    $mail->Subject = 'Alta de soci';
                     $mail->Body = '<!DOCTYPE html>
                     <html lang="es">
                     <head>
@@ -151,18 +151,20 @@
                     ';
             
                     $mail->send();
-                    $error_message.= $t_success;
+                    $error_message[]= $t_success;
+                    echo json_encode(['success'=> true, 'message'=> $error_message]);
                 } catch (Exception $e) {
-                    $error_message.= $t_error." {$mail->ErrorInfo}";
+                    $error_message[]= $t_error." {$mail->ErrorInfo}";
+                    echo json_encode(['success'=> false, 'message'=> $error_message]);
                 }
             } else {
-                $error_message.= $t_error2.'<br>';
+                $error_message[]= $t_error2;
+                echo json_encode(['success'=> false, 'message'=> $error_message]);
             }
-    
-            echo '<div class="form-response">'.$error_message.'</div>';
 
         } else {
-            echo '<div class="form-response">'.$t_error3.'</div>';
+            echo json_encode(['success'=> false, 'message'=> $error_message]);
+
         } 
     }
 

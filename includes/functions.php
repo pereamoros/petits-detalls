@@ -1,5 +1,20 @@
 <?php
 
+function esEnlaceExterno($enlace) {
+    // Obtener el dominio actual
+    $dominioActual = $_SERVER['HTTP_HOST'];
+  
+    // Analizar la URL del enlace
+    $urlEnlace = parse_url($enlace);
+  
+    // Verificar si tiene un host y si es diferente al dominio actual
+    if (isset($urlEnlace['host']) && $urlEnlace['host'] !== $dominioActual) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function validarDNI($dni) {
     $dni = strtoupper(str_replace(array(' ', '-'), '', $dni)); // Eliminar espacios y guiones, convertir a mayúsculas
   

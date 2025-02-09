@@ -1,6 +1,9 @@
 <?php
     if($idioma == "cat") {
         $content_h1 = "Col·labora";
+
+        $t_donacio_h3 = "Pots fer una donació a:";
+        $t_donacio_p = "<b>ES98 2100 0423 9702 0037 2970</b> (La Caixa)<br/> BIZUM: <b>33591</b>";
         
         $socis_h2 = "Socis/es";
         $socis_text = "<p>Fes-te soci/sòcia de Petits Detalls i col·labora periòdicament amb els nostres projectes.</p>";
@@ -20,6 +23,9 @@
         // constants
     } else if($idioma == "esp") {
         $content_h1 = "Colabora";
+
+        $t_donacio_h3 = "Puede hacer una donacón a:";
+        $t_donacio_p = "<b>ES98 2100 0423 9702 0037 2970</b> (La Caixa)<br/> BIZUM: <b>33591</b>";
 
         $socis_h2 = "Socios/as";
         $socis_text = "<p>Hazte socio/socia de Petits Detalls y colabora periódicamente con nuestros proyectos.</p>";

@@ -13,6 +13,7 @@
 @import "components/feature.css";
 @import "components/h2-arrow.css";
 @import "components/text-card.css";
+@import "components/publicacio.css";
 
 @import "modules/gallery.css";
 @import "modules/gallery-segmented.css";
@@ -20,6 +21,7 @@
 @import "modules/hero-video.css";
 @import "modules/text-img-asymetric.css";
 @import "modules/form-item.css";
+@import "modules/canvas.css";
 
 @import "pages/home.css";
 @import "pages/views-structure.css";

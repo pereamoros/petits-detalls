@@ -23,12 +23,10 @@
     <script src="https://www.google.com/recaptcha/api.js?render=<?=$_ENV['CAPTCHA_CLIENT']?>" async defer></script>
 
     <script>
-        var rutaBase = '<?=$_SERVER['DOCUMENT_ROOT']?>';
-            recaptcha_client_key = '<?=$_ENV['CAPTCHA_CLIENT']?>';
+        var recaptcha_client_key = '<?=$_ENV['CAPTCHA_CLIENT']?>';
         $(document).ready(function() {
             $("[name='form-soci']").submit(function(e) {
                 e.preventDefault();
-
                 const responseContainer = document.getElementById("post-response"); 
                 responseContainer.innerHTML = "";
 
@@ -46,11 +44,10 @@
                     idioma = document.querySelector('#form-idioma').value
                     acceptText = document.querySelector('#form-accept-text').value
 
-                    if (!accept) {
-                        // alert("Debes aceptar la política de privacidad para continuar.");
-                        $('#post-response').html('<div class="form-response">'+acceptText+'</div>');
-                        return;
-                    }
+                if (!accept) {
+                    $('#post-response').html('<div class="form-response">'+acceptText+'</div>');
+                    return;
+                }
 
                 grecaptcha.ready(function() {
                     grecaptcha.execute(recaptcha_client_key, 
@@ -75,11 +72,22 @@
                             },
                             cache: false,
                             success: function(data) {
-                                $('#post-response').html(data);
-                                let arrInputs = [name, dni, email, telefon, direccio, iban, cuota, importe, missatge];
-                                arrInputs.forEach(function(e) {
-                                    e.value = "";
-                                });
+                                const newDiv = document.createElement("div");
+                                newDiv.classList.add("form-response");
+                                document.getElementById("post-response").appendChild(newDiv)
+
+                                const response = JSON.parse(data);
+
+                                if(response.success) {
+                                    document.querySelector('form[name="form-soci"]').reset();
+                                    newDiv.innerHTML = response.message;
+                                } else {
+                                    response.message.forEach(error => {
+                                        const parrafo = document.createElement("p");
+                                        parrafo.textContent = error;
+                                        newDiv.appendChild(parrafo);
+                                    });
+                                }
                             }
                         });
 
@@ -104,6 +112,12 @@
 
         <section>
             <div class="container">
+
+                <div class="info-text text">
+                    <p><?=$t_info_1?></p>
+                    <p><?=$t_info_2?></p>
+                </div>
+
                 <form class="form-container" method="post" name="form-soci">
 
                     <div class="form-item-container">

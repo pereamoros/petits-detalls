@@ -61,3 +61,33 @@
         gap: 4rem;
     }
 }
+
+/* CONTACTE */
+.info-text {
+    margin-bottom: 3rem;
+}
+
+/* PUBLICACIONS */
+.publicacio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.publicacions-iframe {
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 800px;
+    }
+}
+
+@media (max-width: 53.125em) {
+    .publicacio-grid {
+        grid-template-columns: 1fr;
+    }
+}

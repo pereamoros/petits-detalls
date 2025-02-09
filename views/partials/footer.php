@@ -67,3 +67,4 @@
         </div>
     </div>
 </footer>
+<script src="/src/js/script.js"></script>
