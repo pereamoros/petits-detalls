@@ -25,11 +25,13 @@ $routes = [
     '/fes-te-soci' => ['view' => 'soci.php', 'idioma' => 'cat', 'correspondencies' => ['/fes-te-soci', '/hazte-socio']],
     '/hazte-socio' => ['view' => 'soci.php', 'idioma' => 'esp', 'correspondencies' => ['/fes-te-soci', '/hazte-socio']],
     '/collaboracions' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
-    '/contacto' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/contacte', '/contacto']],
+    '/colaboraciones' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
     '/publicacions' => ['view' => 'publicacions.php', 'idioma' => 'cat', 'correspondencies' => ['/publicacions', '/publicaciones']],
     '/publicaciones' => ['view' => 'publicacions.php', 'idioma' => 'esp', 'correspondencies' => ['/publicacions', '/publicaciones']],
-    '/colaboraciones' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/collaboracions', '/colaboraciones']],
-    '/contacte' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/contacte', '/contacto']]
+    '/contacte' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/contacte', '/contacto']],
+    '/contacto' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/contacte', '/contacto']],
+    '/avis-legal-politica-proteccio-dades' => ['view' => 'politiques.php', 'idioma' => 'cat', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
+    '/aviso-legal-politica-proteccion-datos' => ['view' => 'politiques.php', 'idioma' => 'esp', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
 
 
 ];

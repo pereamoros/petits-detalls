@@ -28,6 +28,10 @@
     
     .gallery-segmented__img {
         border-radius: 4px;
+
+        img {
+            height: 12rem;
+        }
     }
 
     .gallery-segmented__img--last {

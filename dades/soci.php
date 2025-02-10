@@ -17,7 +17,7 @@
         $form_mensual = "Mensual";
         $form_anual = "Anual";
         $form_personalitzada = "Personalitzada";
-        $form_accept_pp = '* He llegit i accepto la <a href="/politica-privacitat" target="_blank">política de privacitat</a> de Petits Detalls';
+        $form_accept_pp = '* He llegit i accepto la <a href="/avis-legal-politica-proteccio-dades" target="_blank">política de privacitat</a> de Petits Detalls';
         $form_news = "Vull rebre notícies sobre els projectes de Petits Detalls";
         $form_send = "Enviar";
 
@@ -39,7 +39,7 @@
         $form_mensual = "Mensual"; 
         $form_anual = "Anual";
         $form_personalitzada = "Personalizada";
-        $form_accept_pp = '* He leído y acepto la <a href="/politica-privacidad" target="_blank">política de privacidad</a> de Petits Detalls';
+        $form_accept_pp = '* He leído y acepto la <a href="/aviso-legal-politica-proteccion-datos" target="_blank">política de privacidad</a> de Petits Detalls';
         $form_news = "Quiero recibir noticias sobre los proyectos de Petits Detalls";
         $form_send = "Enviar";
     }
