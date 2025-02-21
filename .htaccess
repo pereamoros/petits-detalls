@@ -13,17 +13,23 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-    # Redirigir solicitudes específicas a archivos específicos
-    # RewriteRule ^equip$ templates/equipo.php [NC,L]
+    RewriteCond %{REQUEST_URI} ^/admin$
+    RewriteRule ^(.*)$ /admin/index.php [NC,L]
+
+    RewriteCond %{REQUEST_URI} ^/admin/(.+)$
+    RewriteRule ^/admin/(.*)$ /admin/$1 [L]
 
     # Redirigir todas las solicitudes al directorio public
     RewriteCond %{REQUEST_URI} !^/public
+    RewriteCond %{REQUEST_URI} !^/admin
     RewriteRule ^(.*)$ /public/$1 [L]
 
-    # Redirigir todas las demás solicitudes a index.php
+    # Redirigir todas las demás solicitudes a index.php (si archivo no existe o no es un directorio)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ /public/index.php [L]
+
+    
 </IfModule>
 
 # Proteger archivos sensibles (.htaccess, .env)

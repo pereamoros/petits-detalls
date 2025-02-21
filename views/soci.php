@@ -35,6 +35,7 @@
                     email = document.querySelector('input[name="email"]').value,
                     telefon = document.querySelector('input[name="telefon"]').value,
                     direccio = document.querySelector('input[name="direccio"]').value,
+                    codiPostal = document.querySelector('input[name="codi-postal"]').value,
                     iban = document.querySelector('input[name="iban"]').value,
                     cuota = document.querySelector('select[name="cuota"]').value,
                     importe = document.querySelector('input[name="importe"]').value,
@@ -62,6 +63,7 @@
                                 'email': email,
                                 'telefon': telefon,
                                 'direccio': direccio,
+                                'codi-postal': codiPostal,
                                 'iban': iban,
                                 'cuota': cuota,
                                 'importe': importe,
@@ -151,6 +153,10 @@
                         <div class="form-item">
                             <label for="form-direccio"><?=$form_direccio?></label>
                             <input type="text" name="direccio" id="form-direccio" required/>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-codi-postal"><?=$form_codi_postal?></label>
+                            <input type="text" name="codi-postal" id="form-codi-postal" required/>
                         </div>
                     </div>
 

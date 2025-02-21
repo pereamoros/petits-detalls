@@ -49,9 +49,24 @@
                     <div class="project-detall__content">
                         <div class="project-detall__text text">
                             <?=$content_text?>
+                            
+                            <div class="project-detall__features">
+                                <h3><?=$pilars_text?></h3>
+                                <div class="pilars__grid">
+                                    <?php foreach ($pilars as $pilar) { ?>
+                                        <div class="feature">
+                                            <?=$pilar["svg"]?>
+                                            <div class="feature__text">
+                                                <span><?=$pilar["h3"]?></span>
+                                            </div>
+                                        </div>
+                                    <? } ?>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-detall__helper"></div>
                     </div>
+                    
                 </div>
                 <div class="project-detall__image">
                     <img src="<?=$video_img_url?>" alt="">
@@ -70,22 +85,6 @@
         </article>
         
         <article>
-            <section>
-                <div class="container">
-                    <h2 class="scroll-fade-in"><?=$pilars_text?></h2>
-                    <div class="pilars__grid">
-                        <?php foreach ($pilars as $pilar) { ?>
-                            <div class="feature scroll-fade-in">
-                                <?=$pilar["svg"]?>
-                                <div class="feature__text">
-                                    <h3><?=$pilar["h3"]?></h3>
-                                </div>
-                            </div>
-                        <? } ?>
-                    </div>
-                </div>
-            </section>
-
             <section>
                 <div class="container">
                     <h2 class="scroll-fade-in">Veure més projectes</h2>

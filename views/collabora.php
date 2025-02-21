@@ -34,23 +34,21 @@
                     <p><?=$t_donacio_p?></p>
                 </div>
 
-                <div class="colabora__flex">
-                    <?php foreach($colabora_flex as $colabora_item) { 
-                        (esEnlaceExterno($colabora_item['cta-link'])) ? $link_target = ' target="_blank"' : $link_target = ""; 
-                    ?>
-                        <div class="text-card">
-                            <h2><?=$colabora_item['h2']?></h2>
-                            <div class="text-card__text"><?=$colabora_item['text']?></div>
-                            <a class="cta <?=$colabora_item['cta-class']?>" href="<?=$colabora_item['cta-link']?>"<?=$link_target?>><?=$colabora_item['cta-text']?></a>
-                        </div>
-                    <? } ?>
-                </div>
+                <div class="colabora__container">
+                    <div class="colabora__img">
+                        <img src="/images/colabora-petits-detalls.webp" alt="<?=$content_h1?>" />
+                    </div>
 
-                <div class="colabora__flex">
-                    <div class="text-card">
-                        <h2><?=$colaboracions['h2']?></h2>
-                        <div class="text-card__text"><?=$colaboracions['text']?></div>
-                        <a class="cta <?=$colaboracions['cta-class']?>" href="<?=$colaboracions['cta-link']?>"><?=$colaboracions['cta-text']?></a>
+                    <div class="colabora__text">
+                        <?php foreach($colabora_flex as $colabora_item) { 
+                            (esEnlaceExterno($colabora_item['cta-link'])) ? $link_target = ' target="_blank"' : $link_target = ""; 
+                        ?>
+                            <div class="text-card">
+                                <h2><?=$colabora_item['h2']?></h2>
+                                <div class="text-card__text"><?=$colabora_item['text']?></div>
+                                <a class="cta <?=$colabora_item['cta-class']?>" href="<?=$colabora_item['cta-link']?>"<?=$link_target?>><?=$colabora_item['cta-text']?></a>
+                            </div>
+                        <? } ?>
                     </div>
                 </div>
                 

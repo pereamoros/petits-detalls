@@ -47,6 +47,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    --feature-gap: 2rem;
+    --feature-svg-w: 7rem;
+    --feature-svg-h: 7rem;
+    --feature-svg-padding: 1.5rem;
 }
 
 .missio-visio {

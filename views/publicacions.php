@@ -42,8 +42,7 @@
                             <div class="publicacio-title"><?=$publicacio["title"]?></div>
                             <p class="text"><?=$publicacio["desc"]?></p>
                             <div class="publicacio-cta">
-                                <a href="#publicacions-iframe" class="cta cta--cw" data-src="<?=$publicacio["pdf"]?>" data-h2="<?=$publicacio["title"]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
-                                <a href="<?=$publicacio["pdf"]?>" class="cta cta--c2" download><?=$cta_descarga?></a>
+                                <a href="#publicacions-iframe" class="cta cta--c2" data-src="<?=$publicacio["pdf"]?>" data-h2="<?=$publicacio["title"]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
                             </div>
                         </div>
 

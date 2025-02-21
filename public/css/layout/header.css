@@ -1,6 +1,6 @@
 header {
     padding: 0 2.5rem;
-    background-color: var(--bg-color-light);
+    background-color: var(--bg-color);
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     position: relative;
     min-height: 3rem; 
@@ -56,7 +56,7 @@ nav.menu {
     display: none;
     flex-direction: column;
     gap: .625rem;
-    background-color: var(--bg-color-light);
+    background-color: var(--bg-color);
     padding: .625rem;
     position: absolute;
     right: 0;
@@ -146,7 +146,7 @@ nav.menu {
     }
 
     nav.menu {
-        background-color: var(--bg-color-light);
+        background-color: var(--bg-color);
         position: absolute;
         top: calc(100% - 1px);
         width: 100%;

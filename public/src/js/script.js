@@ -4,11 +4,11 @@ function goToIframe(elemento) {
     var { pdfjsLib } = globalThis;
 
     const canvasText = document.querySelector(".canvas-text");
-    canvasText.classList.toggle("hidden");
+    canvasText.classList.add("hidden");
     const canvasContainer = document.querySelector(".canvas-content__canvas");
-    canvasContainer.classList.toggle("visible");
+    canvasContainer.classList.add("visible");
     const canvasPage = document.querySelector("#canvas-page");
-    canvasPage.classList.toggle("visible");
+    canvasPage.classList.add("visible");
     const canvasTitle = document.querySelector(".canvas-container h2");
     canvasTitle.textContent = h2;
 
@@ -22,38 +22,35 @@ function goToIframe(elemento) {
     canvas = document.getElementById('the-canvas'),
     ctx = canvas.getContext('2d');
 
-    /**
-     * Get page info from document, resize canvas accordingly, and render page.
-     * @param num Page number.
-     */
+
     function renderPage(num) {
-    pageRendering = true;
-    // Using promise to fetch the page
-    pdfDoc.getPage(num).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+        pageRendering = true;
+        
+        pdfDoc.getPage(num).then(function(page) {
+            var viewport = page.getViewport({scale: scale});
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
 
-        // Render PDF page into canvas context
-        var renderContext = {
-        canvasContext: ctx,
-        viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
+            // Render PDF page into canvas context
+            var renderContext = {
+                canvasContext: ctx,
+                viewport: viewport
+            };
+            var renderTask = page.render(renderContext);
 
-        // Wait for rendering to finish
-        renderTask.promise.then(function() {
-        pageRendering = false;
-        if (pageNumPending !== null) {
-            // New page rendering is pending
-            renderPage(pageNumPending);
-            pageNumPending = null;
-        }
+            // Wait for rendering to finish
+            renderTask.promise.then(function() {
+            pageRendering = false;
+            if (pageNumPending !== null) {
+                // New page rendering is pending
+                renderPage(pageNumPending);
+                pageNumPending = null;
+            }
+            });
         });
-    });
 
-    // Update page counters
-    document.getElementById('page_num').textContent = num;
+        // Update page counters
+        document.getElementById('page_num').textContent = num;
     }
 
     /**

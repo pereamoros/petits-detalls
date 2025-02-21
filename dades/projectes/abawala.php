@@ -1,21 +1,10 @@
 <?php
     if($idioma == "cat") {
-        $content_h1 = "Abawala";
-        $content_text = "<p>Abawala significa “nenes” i es tracta d'un projecte  que té per objectiu promoure l'efectiu compliment dels drets humans de nenes i mares joves mitjançant l'impuls dels seus mitjans de vida i la sensibilització comunitària per a la prevenció de la violència i els embarassos adolescents.</p>
-        <p>El projecte es va iniciar el 2022 als districtes de Luuka i Jinja beneficiant a 6 cooperatives de 30 mares cadascuna, a més de 1.000 alumnes i alumnes d'escoles primàries locals gràcies a la realització de xerrades i tallers educatius amb l'objectiu de prevenir embarassos adolescents i casos de violència sexual. Encara que la primera fase del projecte va finalitzar al novembre de 2023, des de Petits Detalls ens hem compromès a continuar donant suport a aquestes cooperatives per a garantir la seva sostenibilitat i actualment el projecte s'implementa al districte de Luuka.</p>";
-        $pilar_1 = "Formació en habilitats i financera";
-        $pilar_2 = "Educació en drets";
-        $pilar_3 = "Sensibilització comunitària";
+        include_once(BASE_PATH.'/content/ca_abawala.php');
     } else if($idioma == "esp") {
-        $content_h1 = "Abawala";
-        $content_text = "<p>Abawala significa “niñas” y se trata de un proyecto cuyo objetivo es promover el efectivo cumplimiento de los derechos humanos de niñas y madres jóvenes mediante el impulso de sus medios de vida y la sensibilización comunitaria para la prevención de la violencia y los embarazos adolescentes.</p>
-        <p>El proyecto se inició en 2022 en los distritos de Luuka y Jinja beneficiando a 6 cooperativas de 30 madres cada una, además de 1.000 alumnos y alumnas de escuelas primarias locales gracias a la realización de charlas y talleres educativos con el objetivo de prevenir embarazos adolescentes y casos de violencia sexual. Aunque la primera fase del proyecto finalizó en noviembre de 2023, desde Petits Detalls nos hemos comprometido a seguir apoyando estas cooperativas para garantizar su sostenibilidad y actualmente el proyecto se implementa en el distrito de Luuka.</p>";
-        $pilar_1 = "Formación en habilidades y financiera";
-        $pilar_2 = "Educación en derechos";
-        $pilar_3 = "Sensibilización comunitaria";
+        include_once(BASE_PATH.'/content/es_abawala.php');
     }
 
-    
     $video_url = "/images/petits-detalls-hero.mp4";
     $video_img_url = "/images/projects/abawala-petits-detalls.webp";
 
@@ -40,6 +29,4 @@
             'svg'=> '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  ><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>'
         ]
     ];
-
-    
 ?>

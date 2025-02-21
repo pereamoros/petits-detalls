@@ -25,7 +25,7 @@
         $memoria_2024_pdf = "/src/publicacions/memoria-2016.pdf";
 
         $memoria_2023_title = "Memoria 2023";
-        $memoria_2023_desc = "Memèria Anual de Petits Detalls 2023.";
+        $memoria_2023_desc = "Memòria Anual de Petits Detalls 2023.";
         $memoria_2023_pdf = "/src/publicacions/memoria-2016.pdf";
 
         

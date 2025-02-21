@@ -1,33 +1,25 @@
 <?php
     if($idioma == "cat") {
-        
+        include_once(BASE_PATH.'/content/ca_footer.php');
         // constants
-        $donacio_h2 = 'Pots fer una donació a:';
-        $donacio_text = "Per més informació per col·laborar amb nosaltres:";
-        $donacio_cta = "Col·labora";
         $footer_menu_title_2 = 'Comunitat';
         $footer_menu_title_3 = 'Segueix-nos';
         $avis_legal = '<a href="/avis-legal-politica-proteccio-dades">Avís legal i Política de protecció de dades</a>.';
 
     } else if($idioma == 'esp') {
+        include_once(BASE_PATH.'/content/es_footer.php');
         // constants
-        $donacio_h2 = 'Puedes hacer una donación a:';
-        $donacio_text = "Para más información para colaborar con nosotros:";
-        $donacio_cta = "Colabora";
         $footer_menu_title_2 = 'Comunidad';
         $footer_menu_title_3 = 'Síguenos';
         $avis_legal = '<a href="/aviso-legal-politica-proteccion-datos">Aviso legal y Política de protección de datos</a>.';
     }
 
-    $donacio_iban = '<b>ES98 2100 0423 9702 0037 2970</b> (La Caixa)';
-    $donacio_bizum = 'BIZUM: <b>33591</b>';
     $footer_menu_title_1 = 'Petits Detalls';
     $footer_mail = 'info@petitsdetalls.org';
-    $footer_nie = 'G66065715';
+    $footer_nie = 'G-66065715';
     
     $footer_menu_1 = [
         $menu_equip,
-        $menu_projectes,
         $menu_mupenzi,
         $menu_smiles,
         $menu_gomesi,
@@ -40,7 +32,6 @@
         $menu_donacions,
         $menu_colaboracions,
         $menu_publicacions,
-        $menu_blog,
         $menu_contacte
     ];
 

@@ -32,6 +32,7 @@
             $form_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
             $form_telefon = htmlspecialchars(trim($_POST['telefon']));
             $form_direccio = htmlspecialchars(trim($_POST['direccio']));
+            $form_codi_postal = htmlspecialchars(trim($_POST['codi-postal']));
             $form_iban = strtoupper(str_replace(' ', '', $_POST['iban']));
             $form_cuota = htmlspecialchars($_POST['cuota']);
             $form_import = filter_var($_POST['importe'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
@@ -62,9 +63,9 @@
             $form_news = ($form_news === "true") ? "SI" : "NO";
     
             // Validació
-            if(!validarDNI($form_dni)) {
-                $error_message[]= $t_dni;
-            }
+            // if(!validarDNI($form_dni)) {
+            //     $error_message[]= $t_dni;
+            // }
             if(!validarEmail($form_email)) {
                 $error_message[]= $t_email;
             }
@@ -124,6 +125,10 @@
                             <tr>
                                 <th>Direcció</th>
                                 <td>'.$form_direccio.'</td>
+                            </tr>
+                            <tr>
+                                <th>Direcció</th>
+                                <td>'.$form_codi_postal.'</td>
                             </tr>
                             <tr>
                                 <th>IBAN</th>

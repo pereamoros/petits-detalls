@@ -1,15 +1,13 @@
 <?php
     if($idioma == "cat") {
-        $content_h1 = "Fes-te soci/sòcia";
-        $t_info_1 = "<b>Si vols saber més dels nostres projectes o tens alguna proposta que creus que ens pot ajudar, no dubtis en escriure'ns!</b>";
-        $t_info_2 = "Recorda que Petits Detalls no acull voluntaris/es a Uganda, però si el que vols és ajudar, no importa a on! A Espanya també tenim una xarxa de col·laboradors i col·laboradores que participen als nostres projectes de formes ben diferents.";
-        
+        include_once(BASE_PATH.'/content/ca_soci.php');        
         // constants
         $form_name = "Nom i Cognoms";
         $form_dni = "DNI";
         $form_email = "Correu electrònic";
         $form_telefon = "Telèfon";
-        $form_direccio = "Direcció (incluir ciutat i codi postal)";
+        $form_direccio = "Direcció";
+        $form_codi_postal = "Codi postal";
         $form_iban = "Compte bancari IBAN";
         $form_cuota = "Tipus de cuota";
         $form_import = "Col·laboració en import";
@@ -22,16 +20,14 @@
         $form_send = "Enviar";
 
     } else if($idioma == "esp") {
-        $content_h1 = "Hazte socio/socia";
-        $t_info_1 = "<b>Si quieres saber más de nuestros proyectos o tienes alguna propuesta que creas que nos puede ayudar, ¡no dudes en escribirnos!</b>";
-        $t_info_2 = "Recuerda que Petits Detalls no acoge voluntarios/as en Uganda, pero si lo que quieres es ayudar, ¡no importa dónde! En España también tenemos una red de colaboradores y colaboradoras que participan en nuestros proyectos de formas muy diferentes.";
-
+        include_once(BASE_PATH.'/content/es_soci.php');
         // constants
         $form_name = "Nombre y Apellidos";
         $form_dni = "DNI"; 
         $form_email = "Correo electrónico";
         $form_telefon = "Teléfono";
-        $form_direccio = "Dirección (incluir ciudad y código postal)";
+        $form_direccio = "Dirección";
+        $form_codi_postal = "Código postal";
         $form_iban = "Cuenta bancaria IBAN"; 
         $form_cuota = "Tipo de cuota";
         $form_import = "Colaboración en importe"; 
@@ -43,8 +39,4 @@
         $form_news = "Quiero recibir noticias sobre los proyectos de Petits Detalls";
         $form_send = "Enviar";
     }
-
-
-    
-    
 ?>

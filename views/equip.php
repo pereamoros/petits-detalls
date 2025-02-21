@@ -31,7 +31,7 @@
                 <div class="equip__grid">
                     <?php
                     foreach($equip as $member) {
-                        ($member == end($equip)) ? $class_last = " card-2__last": $class_last = "";
+                        // ($member == end($equip)) ? $class_last = " card-2__last": $class_last = "";
                     ?>
                         <div class="card-2<?=$class_last?>">
                             <div class="card-2__img">

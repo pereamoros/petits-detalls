@@ -129,7 +129,6 @@
         $menu_projectes,
         $menu_colabora,
         $menu_publicacions,
-        $menu_blog,
         $menu_contacte
     ];
     // Projectes individuals

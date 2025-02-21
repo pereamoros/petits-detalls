@@ -1,0 +1,10 @@
+<?php
+$content_h1 = "Mupenzi";
+$content_text = "<p><b>Mupenzi</b> (“aquel que ama” en suajili) es un proyecto de ayuda integral a niños y niñas huérfanos en situación de extrema vulnerabilidad y riesgo de exclusión social. El proyecto ofrece un hogar, alimentación, atención sanitaria, la mejor educación posible y una familia a todos los menores que viven en el centro.</p>
+<p>Este proyecto, que nació a finales del año 2014, fue la razón por la que comenzó <b>Petits Detalls</b>, con el objetivo de ofrecer atención integral a todos los niños y niñas del orfanato Mupenzi. Desde la llegada de la ong, la realidad de los menores que forman parte del orfanato ha cambiado radicalmente. Antes de Petits Detalls, los niños y niñas no iban al colegio con regularidad, no tenían acceso a un sistema sanitario, se alimentaban tan solo una vez al día y pasaban sus días en una casa en ruinas, en la que no tenían acceso ni a agua ni a electricidad. En 2017 fue el primer año en el que se pudieron implementar íntegramente todos los programas diseñados en el inicio del proyecto. Estos se centran en <b>proporcionar una educación y una sanidad completas</b> y de calidad, alimentación, vivienda y, en definitiva, <b>hacer de Mupenzi un hogar y una familia</b>.</p>
+<p>Desde el año 2017 se implementan acciones de ayuda a la comunidad con la finalidad de impulsar un desarrollo más holístico y estructural, razón por la cual se implementan acciones de ayuda a la infancia a través de las becas escolares, la música y el deporte.</p>
+<p>En la actualidad se está complementando el trabajo con acciones de reunificación familiar y comunitaria que permita a los niños y niñas que ayudamos conocer su comunidad de origen y sus familiares, con la finalidad de darles más herramientas para el futuro.</p>";
+$pilar_1 = "Derechos básicos:<br/> hogar, alimentación y sanidad";
+$pilar_2 = "Educación formal y no formal";
+$pilar_3 = "Reunificación familiar y comunitaria";
+?>
