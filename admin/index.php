@@ -1,8 +1,7 @@
 <?php
     ini_set('display_errors', 1);
 
-    define('NOTFOUND_BASE_PATH', __DIR__ . '/..');
-    require_once NOTFOUND_BASE_PATH . '/config/config.php'; 
+    require_once './validar_sesion.php';
 
     $arr_ignore = ['.', '..', 'config'];
     $content_path = BASE_PATH."/content/";
@@ -85,6 +84,12 @@
                         ?>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <a href="/admin/logout_sesion.php" class="admin-link logout">Tancar la sessió</a>
             </div>
         </section>
         

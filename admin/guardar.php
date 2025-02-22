@@ -1,8 +1,7 @@
 <?php
     ini_set('display_errors', 1);
     
-    define('NOTFOUND_BASE_PATH', __DIR__.'/..');
-    require_once NOTFOUND_BASE_PATH.'/config/config.php'; 
+    require_once './validar_sesion.php';
 
     $file = basename($_POST['file']);
     $nuevasVariables = $_POST['variables'];

@@ -1,8 +1,7 @@
 <?php
     ini_set('display_errors', 1);
-
-    define('NOTFOUND_BASE_PATH', __DIR__.'/..');
-    require_once NOTFOUND_BASE_PATH.'/config/config.php'; 
+   
+    require_once './validar_sesion.php';
 
     $file = basename($_GET['file']);
 
@@ -104,7 +103,7 @@
                     <h1 class="admin-title"><?=$admin_h1?></h1>
 
                     <?php if(!$verify) { ?>
-                        <form method="get" name="versio" class="pill-form pill-form--versio">
+                        <form method="get" name="versio" class="pill-form pill-form__small">
                             <input type="hidden" name="file" value="<?=$file?>">
                             <label for="versio" class="form__label">Modifica una versió:</label>
                             <select name="versio" class="form__input">

@@ -195,13 +195,17 @@ a.link-goback:before {
         background-color: var(--color-white);
         box-shadow: var(--box-shadow);
         align-self: center;
+        cursor: pointer;
     }
 
     input[type="submit"]:hover {
         box-shadow: none;
     }
 }
-.pill-form:has(> select) {
+
+.pill-form__small {
+    --form-gap: 1rem;
+    --form-padding: 1rem;
     width: 500px;
 }
 
@@ -222,11 +226,6 @@ a.link-goback:before {
     text-decoration: underline;
 }
 
-.pill-form--versio {
-    --form-gap: 1rem;
-    --form-padding: 1rem;
-}
-
 
 /* EDITOR SUMMERNOTE */
 .container::after, .container::before {
@@ -234,4 +233,21 @@ a.link-goback:before {
 }
 .panel {
     margin-bottom: 0 !important;
+}
+
+/* LOGIN - LOGOUT */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+a.admin-link.logout {
+    color: red;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+a.admin-link.logout:hover {
+    text-decoration-color: red;
 }
