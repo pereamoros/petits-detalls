@@ -8,7 +8,7 @@
     $modified_path = BASE_PATH."/modified/";
     $files = array_diff(scandir($content_path), $arr_ignore);
     $modified_files = array_diff(scandir($modified_path), $arr_ignore);
-
+    $eventos = ['ca_evento.php', 'es_evento.php'];
     function getLang($string) {
         $codiIdioma = substr($string, 0, 2);
         switch ($codiIdioma) {
@@ -82,6 +82,25 @@
                                 ?> <a class="admin-link" href="/admin/editar.php?file=<?=$file_name?>&versio=<?=$versio?>"><?=$file_name?></a> <?
                             }
                         ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="pill">
+                    <h2 class="pill-header">Hi ha algun evento?</h2>
+                    <div class="pill-content">
+                        <?php
+                            foreach($eventos as $evento) {
+                                $modified_exist = BASE_PATH.'/modified/'.$evento;
+                                $versio = (file_exists($modified_exist)) ? 'modified' : 'online';
+                                $file_name = substr($evento, 0, -4);                                
+                                ?> <a class="admin-link" href="/admin/editar.php?file=<?=$file_name?>&versio=<?=$versio?>"><?=$file_name?></a> <?
+                            }
+                        ?>
+
                     </div>
                 </div>
             </div>

@@ -17,6 +17,8 @@
 </head>
 <body>
  
+    <? include_once BASE_PATH.'/includes/event.php'; ?>
+
     <? include_once BASE_PATH.'/views/partials/header.php'; ?>
 
     <main>

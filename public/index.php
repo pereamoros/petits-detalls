@@ -32,19 +32,11 @@ $routes = [
     '/contacto' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/contacte', '/contacto']],
     '/avis-legal-politica-proteccio-dades' => ['view' => 'politiques.php', 'idioma' => 'cat', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
     '/aviso-legal-politica-proteccion-datos' => ['view' => 'politiques.php', 'idioma' => 'esp', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
-
-    // '/administrador' => ''
-
 ];
 $idioma = 'cat';
 
 if (array_key_exists($request, $routes)) {
     $route = $routes[$request];
-
-    // if($request === '/administrador') {
-    //     require BASE_PATH.'/admin/index.php';
-    //     exit;
-    // }
     
     if (isset($route['idioma'])) {
         $idioma = $route['idioma'];

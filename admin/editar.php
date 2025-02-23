@@ -135,8 +135,21 @@
                                     <input type="text" name="variables[<?=$nombre?>]" id="<?=$nombre?>" value="<?=$$nombre?>" <?=$disabled_input?>>
                                 <? } elseif ($variable['tipo'] === 'textarea') { ?>
                                     <textarea name="variables[<?=$nombre?>]" id="<?=$nombre?>" rows="5" <?=$disabled_input?>><?=$$nombre?></textarea>
+                                <? } elseif ($variable['tipo'] === 'image') { ?>
+                                    <input type="file" name="variables[<?= $nombre ?>]" id="<?= $nombre ?>" accept="image/*" <?= $disabled_input ?>>
+                                <? } elseif ($variable['tipo'] === 'boolean') { ?>
+                                    <div class="radio-group">
+                                        <label>
+                                            <input type="radio" name="variables[<?= $nombre ?>]" value="1" <?= ($$nombre == 1) ? 'checked' : '' ?> <?= $disabled_input ?>>
+                                            Sí
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="variables[<?= $nombre ?>]" value="0" <?= ($$nombre == 0) ? 'checked' : '' ?> <?= $disabled_input ?>>
+                                            No
+                                        </label>
+                                    </div>
                                 <? } ?>
-                            <?  } ?>
+                            <? } ?>
                         </div>
                     <? } ?>
                     

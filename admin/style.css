@@ -135,7 +135,17 @@ h2.pill-header {
         background-color: var(--gray-fb);
         padding: 4px 4px 4px 10px;
     }
+    
+    h3 {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    h3:not(:first-child) {
+        margin-top: 2rem;
+    }
 }
+
+
 
 a.admin-link {
     font-size: var(--font-size);
