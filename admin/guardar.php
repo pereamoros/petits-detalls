@@ -24,7 +24,11 @@
             // Construeix el nou contingut de l'arxiu
             $nuevoContenido = "<?php\n";
             foreach ($variables as $nombre => $variable) {
-                $nuevoContenido.= '$'.$nombre.' = "'.$$nombre.'";' . "\n";
+                if ($$nombre === "0" || $$nombre === "1") {
+                    $nuevoContenido.= '$'.$nombre.' = '.($$nombre === "1" ? 'true' : 'false').";\n";
+                } else {
+                    $nuevoContenido.= '$'.$nombre.' = "'.$$nombre.'";' . "\n";
+                }
             }
             $nuevoContenido .= "?>";
 
