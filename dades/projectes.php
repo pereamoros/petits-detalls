@@ -11,40 +11,40 @@
             "description" => $mupenzi_desc, 
             "img" => "/images/projects/projecte-mupenzi-petits-detalls.webp",
             "url" => $menu_mupenzi_url,
-            "lat" => 0.3,
-            "lng" => 33.1
+            "lat" => 0.449933,
+            "lng" => 33.217483
         ],
         [
             "name"=> $menu_smiles_name,
             "description" => $smiles_desc,
             "img" => "/images/projects/smiles-for-the-future-petits-detalls.webp",
             "url" => $menu_smiles_url,
-            "lat" => 0.5,
-            "lng" => 33.4
+            "lat" => 0.723522,
+            "lng" => 33.424033
         ],
         [
             "name"=> $menu_gomesi_name,
             "description" => $gomesi_desc,
             "img" => "/images/projects/gomesi-petits-detalls.webp",
             "url" => $menu_gomesi_url,
-            "lat" => 0.7,
-            "lng" => 33.3
+            "lat" => 0.809627,
+            "lng" => 33.112988
         ],
         [
             "name"=> $menu_omukisa_name,
             "description" => $omukisa_desc,
             "img" => "/images/projects/omukisa-petits-detalls.webp",
             "url" => $menu_omukisa_url,
-            "lat" => 0.6,
-            "lng" => 33.0
+            "lat" => 0.596944,
+            "lng" => 33.512054
         ],
         [
             "name"=> $menu_abawala_name,
             "description" => $abawala_desc,
             "img" => "/images/projects/abawala-petits-detalls.webp",
             "url" => $menu_abawala_url,
-            "lat" => 0.45,
-            "lng" => 33.5
+            "lat" => 0.631017,
+            "lng" => 33.293113
         ],
     ]
 ?>

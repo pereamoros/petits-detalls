@@ -4,16 +4,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petits Detalls</title>
-    <meta name="description" content="Petits Detalls">
-    <meta name="keywords" content="">
-    <meta name="author" content="Petits Detalls">
-    
+<head>    
     <? include_once BASE_PATH.'/includes/head.php'; ?>
-
 </head>
 <body>
  

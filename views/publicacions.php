@@ -1,17 +1,12 @@
 <?php
     include_once BASE_PATH.'/dades/menu.php';
     include_once BASE_PATH.'/dades/publicacions.php';
+
+    $publicacions = json_decode(file_get_contents('./src/publicacions/publicacions.json'), true);
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petits Detalls</title>
-    <meta name="description" content="Petits Detalls">
-    <meta name="keywords" content="">
-    <meta name="author" content="Petits Detalls">
-    
+<head>    
     <? include_once BASE_PATH.'/includes/head.php'; ?>
     <script src="/src/pdfjs/build/pdf.js" type="module"></script>
 </head>
@@ -37,15 +32,13 @@
                 <div class="publicacio-grid">
 
                     <?php foreach($publicacions as $publicacio) { ?>
-
                         <div class="publicacio">
-                            <div class="publicacio-title"><?=$publicacio["title"]?></div>
-                            <p class="text"><?=$publicacio["desc"]?></p>
+                            <div class="publicacio-title"><?=$publicacio["title"][$idioma_json]?></div>
+                            <p class="text"><?=$publicacio["descripcio"][$idioma_json]?></p>
                             <div class="publicacio-cta">
-                                <a href="#publicacions-iframe" class="cta cta--c2" data-src="<?=$publicacio["pdf"]?>" data-h2="<?=$publicacio["title"]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
+                                <a href="#the-canvas" class="cta cta--c2" data-src="/src/publicacions/<?=$publicacio["arxiu"]?>" data-h2="<?=$publicacio["title"][$idioma_json]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
                             </div>
                         </div>
-
                     <? } ?>
                 </div>               
             </div>
@@ -56,11 +49,15 @@
 
                 <div class="publicacions-canvas">
                     <div class="canvas-container">
-                        <h2>Selecciona un document del llistat</h2>
+                        <h2><?=$h2_pdf_viewer?></h2>
                         <div class="canvas-content">
                             <div class="canvas-content__text">
-                                <p class="canvas-text">Per a llegir de manera online algun document, selecciona una publicació de les llistades més amunt. Si ho prefereixes, també pots descarregar el document.</p>
-                                <span id="canvas-page" class="canvas-page">Pàgina: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                <p class="canvas-text"><?=$text_pdf_viewer?></p>
+                                <span id="canvas-page" class="canvas-page"><?=$text_page?>: <span id="page_num"></span> / <span id="page_count"></span></span>
+                                <div class="canvas-page__input">
+                                    <input type="number" id="page-input" style="width:75px;">
+                                    <button id="go-to-page"><?=$text_go_to_page?></button>
+                                </div>
                             </div>    
                             <div class="canvas-content__canvas">
                                 <button class="canvas-btn" id="prev">

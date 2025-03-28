@@ -4,6 +4,7 @@
         // constants
         $footer_menu_title_2 = 'Comunitat';
         $footer_menu_title_3 = 'Segueix-nos';
+        $text_subvencio = 'Pàgina web subvencionada per:';
         $avis_legal = '<a href="/avis-legal-politica-proteccio-dades">Avís legal i Política de protecció de dades</a>.';
 
     } else if($idioma == 'esp') {
@@ -11,6 +12,7 @@
         // constants
         $footer_menu_title_2 = 'Comunidad';
         $footer_menu_title_3 = 'Síguenos';
+        $text_subvencio = 'Página web subvencionada por:';        
         $avis_legal = '<a href="/aviso-legal-politica-proteccion-datos">Aviso legal y Política de protección de datos</a>.';
     }
 

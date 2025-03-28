@@ -1,0 +1,29 @@
+@import "base/reset";
+@import "base/typography";
+@import "base/variables";
+@import "base/general";
+@import "base/animations";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "modules/gallery";
+@import "modules/gallery-segmented";
+@import "modules/hero-img";
+@import "modules/hero-video";
+@import "modules/text-img-asymetric";
+@import "modules/form-item";
+@import "modules/canvas";
+@import "modules/mapa";
+
+@import "pages/home";
+@import "pages/views-structure";
+@import "pages/just-text";
+
+@import "components/cta";
+@import "components/card";
+@import "components/card-2";
+@import "components/feature";
+@import "components/h2-arrow";
+@import "components/text-card";
+@import "components/publicacio";

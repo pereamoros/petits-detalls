@@ -20,6 +20,8 @@
                 <img src="/images/logo-petits-detalls-white.png" alt="Logo de Petits Detalls" class="footer__logo">
                 <p><?=$footer_mail?></p>
                 <p><?=$footer_nie?></p>
+                <!-- <p>Pàgina web subvencionada per:<?=$footer_subvencio?></p>
+                <img src="/images/ACCD.png" alt="ACCD" width="200"> -->
             </div>
 
             <div class="footer__info">
@@ -59,6 +61,12 @@
                     <? } ?>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="footer__legal">
+        <div class="container">
+            <p class="u-margin-bottom-1"><b><?=$text_subvencio?></b></p>
+            <img src="/images/ACCD.png" alt="ACCD" />
         </div>
     </div>
     <div class="footer__legal">

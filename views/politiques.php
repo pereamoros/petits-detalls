@@ -27,37 +27,88 @@
     <main>
         <section>
             <div class="container just-text text">
-                <h1>Aviso legal y Política de protección de datos</h1>
-                <h2>Aviso legal</h2>
-                <p>Los derechos de propiedad intelectual de los servicios on-line de Petits Detalls y de su contenido pertenecen a dicha sociedad o, en su caso, a terceras personas.</p>
-                <p>El usuario puede visualizar todos los elementos, imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, única y exclusivamente, para su uso personal y privado. Para la utilización con fines comerciales de los contenidos de la web, su distribución, así como su modificación, alteración o descompilación, se requiere un permiso previo de Petits Detalls.</p>
-                <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que Petits Detalls pueda ofrecer en su sede web y a no emplearlos para incurrir en actividades ilícitas o contrarias a la buena fe y al ordenamiento legal.</p>
-                <p>Con la voluntad de mejorar la página web, Petits Detalls se reserva el derecho de efectuar las modificaciones que considere oportunas, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que presta como la forma en la que éstos aparezcan presentados o localizados.</p>
-                <p>Petits Detalls autoriza menciones a sus contenidos en otras webs, siempre que no reproduzcan los contenidos presentes en la página web de Petits Detalls. En el caso de disponer de un enlace hipertexto a alguna de sus páginas, el usuario debe saber que está entrando en la página web de Petits Detalls y debe percibir en su navegador su dirección URL. Si Petits Detalls detecta el incumplimiento de las anteriores condiciones, así como cualquier utilización indebida de los contenidos presentados en su página web, se reserva el derecho de ejercer todas las acciones civiles y penales necesarias.</p>
+                <?php if($idioma = 'cat') :?>
+                    <h1>Avís legal y Política de protecció de dades</h1>
+                    <h2>Avís legal</h2>
+                    <p>Els drets de propietat intel·lectual dels serveis on-line de Petits Detalls i del seu contingut pertanyen a aquesta societat o, si escau, a terceres persones.</p>
+                    <p>L'usuari pot visualitzar tots els elements, imprimir-los, copiar-los i emmagatzemar-los en el disc dur del seu ordinador o en qualsevol altre suport físic sempre que sigui, única i exclusivament, per al seu ús personal i privat. Per a la utilització amb fins comercials dels continguts de la web, la seva distribució, així com la seva modificació, alteració o descompilació, es requereix un permís previ de Petits Detalls.</p>
+                    <p>L'usuari es compromet a fer un ús adequat dels continguts i serveis que Petits Detalls pugui oferir en la seva seu web i a no emprar-los per a incórrer en activitats il·lícites o contràries a la bona fe i a l'ordenament legal.</p>
+                    <p>Amb la voluntat de millorar la pàgina web, Petits Detalls es reserva el dret d'efectuar les modificacions que consideri oportunes, podent canviar, suprimir o afegir tant els continguts i serveis que presta com la forma en la qual aquests apareguin presentats o localitzats.</p>
+                    <p>Petits Detalls autoritza mencions als seus continguts en altres webs, sempre que no reprodueixin els continguts presents en la pàgina web de Petits Detalls. En el cas de disposar d'un enllaç hipertexte a alguna de les seves pàgines, l'usuari ha de saber que està entrant en la pàgina web de Petits Detalls i ha de percebre en el seu navegador la seva adreça URL. Si Petits Detalls detecta l'incompliment de les anteriors condicions, així com qualsevol utilització indeguda dels continguts presentats en la seva pàgina web, es reserva el dret d'exercir totes les accions civils i penals necessàries.</p>
 
-                <h2>Protección de datos</h2>
-                <p>Petits Detalls, con CIF B61670402 es el Responsable del tratamiento de los datos personales del Usuario y le informa que estos datos serán tratados de conformidad con lo dispuesto en el Reglamento (UE) 2016/679 de 27 de abril de 2016 (GDPR) relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos.</p>
-                <p>Finalidad del tratamiento: Se recogerán los datos necesarios para la relación comercial y los que requiera el servicio solicitado por el cliente.</p>
-                <p>Plazos de conservación de los datos: Se conservarán mientras exista un interés mutuo para mantener el fin del tratamiento.</p>
-                <p>Comunicación de los datos: No se comunicarán los datos a terceros, salvo obligación legal.</p>
-                <p>Confidencialidad: Petits Detalls garantiza la confidencialidad de los datos personales facilitados y adoptará las medidas reglamentarias que eviten, en la medida de lo posible, su alteración, pérdida, tratamiento o acceso no autorizado.</p>
-                <h3>Derechos que asisten al Usuario:</h3>
-                <p>Derecho a retirar el consentimiento en cualquier momento.<br/>
-                Derecho de acceso, rectificación, portabilidad y supresión de sus datos y a la limitación u oposición al su tratamiento.<br/>
-                Derecho a presentar una reclamación ante la autoridad de control (agpd.es) si considera que el tratamiento no se ajusta a la normativa vigente.<br/>
-                Para ejercer tus derechos, puedes enviar un email a Petits Detalls en el email: info@petitsdetalls.org</p>
+                    <h2>Protecció de dades</h2>
+                    <p>Petits Detalls, amb CIF G66065715 és el responsable del tractament de les dades personals de l'Usuari i l'informa que aquestes dades seran tractades de conformitat amb allò disposat al Reglament (UE) 2016/679 de 27 d'abril de 2016 (GDRP) relatiu a la protecció de les persones físiques en el que respecta al tractament de dades personals i a la lliure circulació d'aquestes dades.</p>
+                    <p>Finalitat del tractament: Es recolliran les dades necessàries per a la relació comercial i les requerides pel servei sol·licitat pel client.</p>
+                    <p>Termini de conservació de les dades: Es conservaran mentre existeixi un interès mutu per mantenir la finalitat del tractament.</p>
+                    <p>Comunicació de les dades: No es comunicaràn dades a tercers excepte per obligació legal.</p>
+                    <p>Confidencialitat: Petits Detalls garanteix la confidencialitat de les dades personals facilitades i adoptarà les mesures reglamentàries que evitin, en la mesura del possible, la seva alteració, pèrdua, tractament o accés no autoritzat.</p>
+                    <h3>Drets que assisteixen a l'Usuari:</h3>
+                    <p>Dret a retirar el consentiment en qualsevol moment.<br/>
+                    Dret d'accés, rectificació, portabilitat i supressió de les dades i la limitació o oposició al seu tractament.<br/>
+                    Dret a presentar una reclamació davant de l'autoritat de control (agpd.es) si considera que el tractament no s'ajusta a la normativa vigent.<br/>
+                    Per exercir els teus drets, pots enviar un email a Petits Detalls: info@petitsdetalls.org.</p>
 
-                <h2>Política de cookies</h2>
-                <p>Este sitio web utiliza cookies de terceros: Google Analytics. Son un tipo de cookies diseñadas para obtener datos mientras el usuario accede a la web. Permiten saber el uso que el usuario hace de los diferentes servicios de la página web.</p>
-                <p>La finalidad de las cookies utilizadas es con fines estadísticos y para la mejora de la experiencia de usuario.</p>
-                <h3>Cómo desactivar o eliminar cookies</h3>
-                <p>El Usuario puede configurar su navegador para que no se instalen cookies o para recibir un aviso en pantalla cada vez que una cookie quiera instalarse, pudiendo decidir en cada momento si aceptarlo o no. Igualmente, el usuario puede eliminar las cookies cambiando la configuración de su navegador o eliminarlas manualmente. La eliminación de cookies puede suponer una disminución en la calidad o funcionalidades de la página web.</p><p>Consulta la información relativa a la eliminación/desactivación de cookies de tu navegador:</p>
-                <ul>
-                    <li><a href="https://support.google.com/chrome/answer/95647?hl=es">Google Chrome </a></li>
-                    <li><a href="https://support.apple.com/es-es/HT201265">Safari</a></li>
-                    <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-">Mozilla Firefox </a></li>
-                    <li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies#ie=ie-10">Internet Explorer </a></li>
-                </ul>
+                    <h2>Política de cookies</h2>
+                    <p>Este sitio web utiliza cookies de terceros: Google Analytics. Son un tipo de cookies diseñadas para obtener datos mientras el usuario accede a la web. Permiten saber el uso que el usuario hace de los diferentes servicios de la página web.</p>
+                    <p>La finalitat de les cookies utilitzades és per raons estadístiques i per a la millora de l’experiència d’usuari.</p>
+                    <h3>Com desactivar o eliminar cookies</h3>
+                    <p>L’Usuari pot configurar el seu navegador perquè no s’instal·lin cookies o per rebre un avís en pantalla cada vegada que una cookie vulgui instal·lar-se, podent decidir a cada moment si acceptar-ho o no. Igualment, l’usuari pot eliminar les cookies canviant la configuració del seu navegador o eliminar-les manualment. L’eliminació de cookies pot suposar una disminució en la qualitat o funcionalitats de la pàgina web.</p>
+                    <p>Consulta la información relativa a la eliminación/desactivació de cookies del teu navegador:</p>
+                    <ul>
+                        <li><a href="https://support.google.com/chrome/answer/95647?hl=es">Google Chrome </a></li>
+                        <li><a href="https://support.apple.com/es-es/HT201265">Safari</a></li>
+                        <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-">Mozilla Firefox </a></li>
+                        <li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies#ie=ie-10">Internet Explorer </a></li>
+                    </ul>
+                    <p><hr></p>
+                    <p>
+                        Associació Petits Detalls<br/>
+                        C.I.F. G66065715<br/>
+                        C/ Turó del Pujol, 38<br/>
+                        08230 Matadepera<br/>
+                        Registro Nacional de Asociaciones del Ministerio del Interior con número 604506
+                    </p>
+                <?php elseif($idioma = 'esp') : ?>
+                    <h1>Aviso legal y Política de protección de datos</h1>
+                    <h2>Aviso legal</h2>
+                    <p>Los derechos de propiedad intelectual de los servicios on-line de Petits Detalls y de su contenido pertenecen a dicha sociedad o, en su caso, a terceras personas.</p>
+                    <p>El usuario puede visualizar todos los elementos, imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, única y exclusivamente, para su uso personal y privado. Para la utilización con fines comerciales de los contenidos de la web, su distribución, así como su modificación, alteración o descompilación, se requiere un permiso previo de Petits Detalls.</p>
+                    <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que Petits Detalls pueda ofrecer en su sede web y a no emplearlos para incurrir en actividades ilícitas o contrarias a la buena fe y al ordenamiento legal.</p>
+                    <p>Con la voluntad de mejorar la página web, Petits Detalls se reserva el derecho de efectuar las modificaciones que considere oportunas, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que presta como la forma en la que éstos aparezcan presentados o localizados.</p>
+                    <p>Petits Detalls autoriza menciones a sus contenidos en otras webs, siempre que no reproduzcan los contenidos presentes en la página web de Petits Detalls. En el caso de disponer de un enlace hipertexto a alguna de sus páginas, el usuario debe saber que está entrando en la página web de Petits Detalls y debe percibir en su navegador su dirección URL. Si Petits Detalls detecta el incumplimiento de las anteriores condiciones, así como cualquier utilización indebida de los contenidos presentados en su página web, se reserva el derecho de ejercer todas las acciones civiles y penales necesarias.</p>
+
+                    <h2>Protección de datos</h2>
+                    <p>Petits Detalls, con CIF B61670402 es el Responsable del tratamiento de los datos personales del Usuario y le informa que estos datos serán tratados de conformidad con lo dispuesto en el Reglamento (UE) 2016/679 de 27 de abril de 2016 (GDPR) relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos.</p>
+                    <p>Finalidad del tratamiento: Se recogerán los datos necesarios para la relación comercial y los que requiera el servicio solicitado por el cliente.</p>
+                    <p>Plazos de conservación de los datos: Se conservarán mientras exista un interés mutuo para mantener el fin del tratamiento.</p>
+                    <p>Comunicación de los datos: No se comunicarán los datos a terceros, salvo obligación legal.</p>
+                    <p>Confidencialidad: Petits Detalls garantiza la confidencialidad de los datos personales facilitados y adoptará las medidas reglamentarias que eviten, en la medida de lo posible, su alteración, pérdida, tratamiento o acceso no autorizado.</p>
+                    <h3>Derechos que asisten al Usuario:</h3>
+                    <p>Derecho a retirar el consentimiento en cualquier momento.<br/>
+                    Derecho de acceso, rectificación, portabilidad y supresión de sus datos y a la limitación u oposición al su tratamiento.<br/>
+                    Derecho a presentar una reclamación ante la autoridad de control (agpd.es) si considera que el tratamiento no se ajusta a la normativa vigente.<br/>
+                    Para ejercer tus derechos, puedes enviar un email a Petits Detalls en el email: info@petitsdetalls.org</p>
+
+                    <h2>Política de cookies</h2>
+                    <p>Este sitio web utiliza cookies de terceros: Google Analytics. Son un tipo de cookies diseñadas para obtener datos mientras el usuario accede a la web. Permiten saber el uso que el usuario hace de los diferentes servicios de la página web.</p>
+                    <p>La finalidad de las cookies utilizadas es con fines estadísticos y para la mejora de la experiencia de usuario.</p>
+                    <h3>Cómo desactivar o eliminar cookies</h3>
+                    <p>El Usuario puede configurar su navegador para que no se instalen cookies o para recibir un aviso en pantalla cada vez que una cookie quiera instalarse, pudiendo decidir en cada momento si aceptarlo o no. Igualmente, el usuario puede eliminar las cookies cambiando la configuración de su navegador o eliminarlas manualmente. La eliminación de cookies puede suponer una disminución en la calidad o funcionalidades de la página web.</p><p>Consulta la información relativa a la eliminación/desactivación de cookies de tu navegador:</p>
+                    <ul>
+                        <li><a href="https://support.google.com/chrome/answer/95647?hl=es">Google Chrome </a></li>
+                        <li><a href="https://support.apple.com/es-es/HT201265">Safari</a></li>
+                        <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-">Mozilla Firefox </a></li>
+                        <li><a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies#ie=ie-10">Internet Explorer </a></li>
+                    </ul>
+                    <p><hr></p>
+                    <p>
+                        Associació Petits Detalls<br/>
+                        C.I.F. G66065715<br/>
+                        C/ Turó del Pujol, 38<br/>
+                        08230 Matadepera<br/>
+                        Registro Nacional de Asociaciones del Ministerio del Interior con número 604506
+                    </p>
+                <?php endif; ?>
             </div>
         </section>
     </main>

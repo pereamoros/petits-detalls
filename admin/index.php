@@ -6,9 +6,10 @@
     $arr_ignore = ['.', '..', 'config'];
     $content_path = BASE_PATH."/content/";
     $modified_path = BASE_PATH."/modified/";
-    $files = array_diff(scandir($content_path), $arr_ignore);
-    $modified_files = array_diff(scandir($modified_path), $arr_ignore);
     $eventos = ['ca_evento.php', 'es_evento.php'];
+    $files = array_diff(scandir($content_path), $arr_ignore);
+    $files = array_diff($files, $eventos);
+    $modified_files = array_diff(scandir($modified_path), $arr_ignore);
     function getLang($string) {
         $codiIdioma = substr($string, 0, 2);
         switch ($codiIdioma) {

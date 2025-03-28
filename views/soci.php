@@ -10,18 +10,10 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petits Detalls</title>
-    <meta name="description" content="Petits Detalls">
-    <meta name="keywords" content="">
-    <meta name="author" content="Petits Detalls">
-    
+<head>    
     <? include_once BASE_PATH.'/includes/head.php'; ?>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=<?=$_ENV['CAPTCHA_CLIENT']?>" async defer></script>
-
     <script>
         var recaptcha_client_key = '<?=$_ENV['CAPTCHA_CLIENT']?>';
         $(document).ready(function() {
@@ -99,7 +91,6 @@
             });
         });
     </script>
-
 </head>
 <body>
 

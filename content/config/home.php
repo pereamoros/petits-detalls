@@ -1,5 +1,13 @@
 <?php
 $variables = [
+    'meta_title' => [
+        'tipo' => 'texto',
+        'label' => 'Meta Títol'
+    ],
+    'meta_desc' => [
+        'tipo' => 'texto',
+        'label' => 'Meta Descripció'
+    ],
     'content_h1' => [
         'tipo' => 'texto',
         'label' => 'Títol principal'

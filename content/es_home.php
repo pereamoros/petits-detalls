@@ -1,4 +1,6 @@
 <?php
+$meta_title = "Petits Detalls";
+$meta_desc = "Página web oficial de la ong Petits Detalls que desarrolla proyectos  de cooperación en Uganda.";
 $content_h1 = "10 años de proyectos en Uganda";
 $hero_span = "Petits Detalls somos una ONG que promueve proyectos de cooperación internacional en Uganda.";
 $hero_cta = "Colabora";

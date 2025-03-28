@@ -1,0 +1,27 @@
+.hero-img {
+    position: relative;
+    background-image: url("/images/petits-detalls-uganda.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-img::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(180deg, 
+        rgba(242, 240, 228, .4) 0%,
+        rgb(252, 251, 243) 100%
+    );
+    margin: -1px 0;
+}
+
+.hero-img .container {
+    position: relative;
+    z-index: 1;
+}

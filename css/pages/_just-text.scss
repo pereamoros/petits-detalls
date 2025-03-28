@@ -1,0 +1,14 @@
+.just-text {
+    h1 {
+        font-size: var(--xl-font-size);
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 2rem;
+    }
+
+    a {
+        color: initial;
+        text-decoration: underline;
+    }
+}

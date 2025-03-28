@@ -1,0 +1,34 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--feature-gap);
+    text-align: center;
+
+    svg {
+        width: var(--feature-svg-w);
+        height: var(--feature-svg-h);
+        padding: var(--feature-svg-padding);
+        stroke: var(--primary-color);
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+    }
+}
+
+.feature--left {
+    text-align: left;
+}
+
+.feature__text {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    
+    span {
+        font-family: var(--font-family-bold);
+    }
+}
+
+.feature__text--num {
+    font-size: 4.5rem;
+}

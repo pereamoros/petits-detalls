@@ -1,0 +1,84 @@
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.canvas-content {
+    background-color: var(--text-color);
+    padding: 2rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.canvas-content__canvas {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.canvas-content__canvas.visible {
+    display: flex;
+}
+
+.canvas-content__text {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .675rem;
+}
+
+.canvas-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 42px;
+    }
+}
+
+.canvas-text.hidden {
+    display: none;
+}
+.canvas-page, .canvas-page__input {
+    display: none;
+    text-align: center;
+}
+.canvas-page.visible, .canvas-page__input.visible {
+    display: block;
+}
+
+@media (max-width: 53.125em) {
+
+    .canvas-content {
+        padding: 1rem;
+    }
+    .canvas-content__canvas {
+        gap: 0;
+        
+        canvas {
+            width: 100%;
+        }
+    }
+
+    .canvas-btn {
+        height: 30px;
+        width: 30px;
+    } 
+}

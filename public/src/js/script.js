@@ -53,10 +53,7 @@ function goToIframe(elemento) {
         document.getElementById('page_num').textContent = num;
     }
 
-    /**
-     * If another page rendering in progress, waits until the rendering is
-     * finised. Otherwise, executes rendering immediately.
-     */
+    // If another page rendering in progress, waits until the rendering is finised. Otherwise, executes rendering immediately.
     function queueRenderPage(num) {
         if (pageRendering) {
             pageNumPending = num;
@@ -65,9 +62,7 @@ function goToIframe(elemento) {
         }
     }
 
-    /**
-     * Displays previous page.
-     */
+    // Displays previous page.
     function onPrevPage() {
         if (pageNum <= 1) {
             return;
@@ -77,9 +72,7 @@ function goToIframe(elemento) {
     }
     document.getElementById('prev').addEventListener('click', onPrevPage);
 
-    /**
-     * Displays next page.
-     */
+    // Displays next page.
     function onNextPage() {
         if (pageNum >= pdfDoc.numPages) {
             return;
@@ -89,15 +82,31 @@ function goToIframe(elemento) {
     }
     document.getElementById('next').addEventListener('click', onNextPage);
 
-    /**
-     * Asynchronously downloads PDF.
-     */
+    // Asynchronously downloads PDF
     pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         pdfDoc = pdfDoc_;
         document.getElementById('page_count').textContent = pdfDoc.numPages;
 
         // Initial/first page rendering
         renderPage(pageNum);
+    });
+
+
+    // Input navegació per pàgines
+    const pageInputContainer = document.querySelector(".canvas-page__input");
+    pageInputContainer.classList.add("visible");
+    const pageInput = document.querySelector("#page-input");
+    const goToPageButton = document.querySelector("#go-to-page");
+
+    goToPageButton.addEventListener("click", () => {
+        const pageNumber = parseInt(pageInput.value); // Obtener el número de página del input
+
+        if (pageNumber >= 1 && pageNumber <= pdfDoc.numPages) {
+            pageNum = pageNumber;
+            queueRenderPage(pageNum); // Renderizar la página deseada
+        } else {
+            alert("Número de página inválido."); // Manejar el caso de número de página inválido
+        }
     });
 }
 

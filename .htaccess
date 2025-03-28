@@ -9,6 +9,34 @@
     RewriteCond %{HTTP_HOST} ^petitsdetalls.org$
     RewriteRule (.*) https://www.petitsdetalls.org/$1 [R=301,L]
 
+    # Redireccions web antiga
+    RewriteRule ^es/$ /es [R=301,L]
+    RewriteRule ^equipo/$ /equip [R=301,L]
+    RewriteRule ^es/equipo/$ /equipo [R=301,L]
+    RewriteRule ^projectes/$ /projectes [R=301,L]
+    RewriteRule ^es/proyectos/$ /proyectos [R=301,L]
+    RewriteRule ^fes-te-amic-cat/$ /fes-te-soci [R=301,L]
+    RewriteRule ^es/hazte-amigo-2/$ /hazte-socio [R=301,L]
+    RewriteRule ^sobre-nosaltres/$ /equip [R=301,L]
+    RewriteRule ^es/sobre-nosotros/$ /equipo [R=301,L]
+    RewriteRule ^contacte/$ /contacte [R=301,L]
+    RewriteRule ^es/contacto-2/$ /contacto [R=301,L]
+    RewriteRule ^donacions/$ /collabora [R=301,L]
+    RewriteRule ^mi-grano-de-arena/$ /collabora [R=301,L]
+    RewriteRule ^regala-petits-detalls/$ /collabora [R=301,L]
+    RewriteRule ^socisidonacions/$ /collabora [R=301,L]
+    RewriteRule ^feed/$ / [R=301,L]
+    RewriteRule ^es/feed/$ / [R=301,L]
+    RewriteRule ^blogpetitsdetalls/$ / [R=301,L]
+    RewriteRule ^es/blogpetitsdetalls/$ / [R=301,L]
+    RewriteRule ^avis-legal-politica-de-proteccio-de-dades-politica-de-cookies/$ /avis-legal-politica-proteccio-dades [R=301,L]
+    RewriteRule ^aviso-legal-y-politica-de-proteccion-de-datos/$ /aviso-legal-politica-proteccion-datos [R=301,L]
+    RewriteRule ^wp-content/cache/.*$ / [R=301,L]
+    RewriteRule ^wp-content/plugins/.*$ / [R=301,L]
+    RewriteRule ^wp-content/themes/.*$ / [R=301,L]
+    RewriteRule ^wp-content/uploads/.*$ / [R=301,L]
+    RewriteRule ^wp-includes/.*$ / [R=301,L]
+
     # Eliminar barra final de las URIs que no son directorios
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
@@ -29,7 +57,6 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ /public/index.php [L]
 
-    
 </IfModule>
 
 # Proteger archivos sensibles (.htaccess, .env)
@@ -48,14 +75,10 @@ Options -Indexes
     # Header set X-Frame-Options "ALLOW-FROM https://www.petitsdetalls.org"
     Header set X-XSS-Protection "1; mode=block"
     Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';"
 </IfModule>
 
 # Restringir métodos HTTP permitidos
 <LimitExcept GET POST>
     Deny from all
 </LimitExcept>
-
-# Configurar Content Security Policy (CSP)
-<IfModule mod_headers.c>
-    # Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';"
-</IfModule>

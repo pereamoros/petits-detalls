@@ -1,4 +1,6 @@
 <?php
+$meta_title = "Petits Detalls";
+$meta_desc = "Llista dels projectes de cooperació internacional que la ONG Petits Detalls porta a terme a Uganda.";
 $content_h1 = "Projectes";
 $mupenzi_desc = "Projecte de protecció infantil i ajuda a la infància vulnerable";
 $smiles_desc = "Projecte d'educació, protecció infantil i salut sexual i reproductiva.";

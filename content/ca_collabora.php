@@ -1,4 +1,6 @@
 <?php
+$meta_title = "Petits Detalls";
+$meta_desc = "Per a col·laborar amb Petits Detalls, pots fer-te soci, fer una donació puntual o oferir les teves idees.";
 $content_h1 = "Col·labora";
 $t_donacio_h3 = "Pots fer una donació a:";
 $t_donacio_p = "<b>ES98 2100 0423 9702 0037 2970</b> (La Caixa)<br/> BIZUM: <b>33591</b>";

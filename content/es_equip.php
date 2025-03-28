@@ -1,4 +1,6 @@
 <?php
+$meta_title = "Petits Detalls";
+$meta_desc = "Equipo de personas de Petits Detalls en España y Uganda.";
 $content_h1 = "Equipo";
 $member_1_name = "Quico Germain";
 $member_1_role = "Responsable de alianzas estratégicas";
