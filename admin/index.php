@@ -91,6 +91,17 @@
         <section>
             <div class="container">
                 <div class="pill">
+                    <h2 class="pill-header">Publicacions</h2>
+                    <div class="pill-content">
+                        <a class="admin-link" href="/admin/publicacions.php?">Afegir - Modificar - Eliminar publicacions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="pill">
                     <h2 class="pill-header">Hi ha algun evento?</h2>
                     <div class="pill-content">
                         <?php

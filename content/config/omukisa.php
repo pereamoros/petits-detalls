@@ -31,6 +31,6 @@ $variables = [
     'pilar_4' => [
         'tipo' => 'texto',
         'label' => 'Pilar 4'
-    ],
+    ]
 ];
 ?>

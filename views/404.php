@@ -15,11 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petits Detalls</title>
     <meta name="description" content="Petits Detalls">
-    <meta name="keywords" content="">
-    <meta name="author" content="Petits Detalls">
-    
-    <? include_once BASE_PATH.'/includes/head.php'; ?>
-
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/petits-detalls-favicon.ico" sizes="any" type="image/x-icon">
+    <link rel="stylesheet" href="/css/min-main.css">
 </head>
 <body>
 
@@ -29,7 +27,7 @@
             <div class="container">
                 <h1>error 404</h1>
                 <p>La pàgina que busques no existeix.</p>
-                <a href="/">Tornar a la pàgina principal</a>
+                <a href="/" style="text-decoration:underline">Tornar a la pàgina principal</a>
             </div>
         </section>
     </main>

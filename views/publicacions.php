@@ -36,7 +36,7 @@
                             <div class="publicacio-title"><?=$publicacio["title"][$idioma_json]?></div>
                             <p class="text"><?=$publicacio["descripcio"][$idioma_json]?></p>
                             <div class="publicacio-cta">
-                                <a href="#the-canvas" class="cta cta--c2" data-src="/src/publicacions/<?=$publicacio["arxiu"]?>" data-h2="<?=$publicacio["title"][$idioma_json]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
+                                <a href="#canvas-container" class="cta cta--c2" data-src="/src/publicacions/<?=$publicacio["arxiu"]?>" data-h2="<?=$publicacio["title"][$idioma_json]?>" onclick="goToIframe(this)"><?=$cta_veure?></a>
                             </div>
                         </div>
                     <? } ?>
@@ -47,7 +47,7 @@
         <section>
             <div class="container">
 
-                <div class="publicacions-canvas">
+                <div class="publicacions-canvas" id="canvas-container">
                     <div class="canvas-container">
                         <h2><?=$h2_pdf_viewer?></h2>
                         <div class="canvas-content">
@@ -58,8 +58,12 @@
                                     <input type="number" id="page-input" style="width:75px;">
                                     <button id="go-to-page"><?=$text_go_to_page?></button>
                                 </div>
+
                             </div>    
                             <div class="canvas-content__canvas">
+                                <div id="loader" class="loader-container">
+                                    <div class="loader"></div>
+                                </div>
                                 <button class="canvas-btn" id="prev">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6l6 6" /></svg>
                                 </button>

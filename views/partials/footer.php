@@ -9,7 +9,7 @@
                 <p class="donacio__text"><?=$donacio_bizum?></p>
     
                 <p><?=$donacio_text?></p>
-                <a href="#" class="cta cta--cw"><?=$donacio_cta?></a>
+                <a href="<?=$donacio_link?>" class="cta cta--cw"><?=$donacio_cta?></a>
             </div>
         </div>
     </div>
@@ -20,8 +20,6 @@
                 <img src="/images/logo-petits-detalls-white.png" alt="Logo de Petits Detalls" class="footer__logo">
                 <p><?=$footer_mail?></p>
                 <p><?=$footer_nie?></p>
-                <!-- <p>Pàgina web subvencionada per:<?=$footer_subvencio?></p>
-                <img src="/images/ACCD.png" alt="ACCD" width="200"> -->
             </div>
 
             <div class="footer__info">

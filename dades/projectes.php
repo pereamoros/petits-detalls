@@ -9,7 +9,7 @@
         [
             "name"=> $menu_mupenzi_name,
             "description" => $mupenzi_desc, 
-            "img" => "/images/projects/projecte-mupenzi-petits-detalls.webp",
+            "img" => "/images/projects/mupenzi-petits-detalls.webp",
             "url" => $menu_mupenzi_url,
             "lat" => 0.449933,
             "lng" => 33.217483

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>    
-    <? include_once BASE_PATH.'/includes/head.php'; ?>
+    <?php include_once BASE_PATH.'/includes/head.php'; ?>
 </head>
 <body>
  
@@ -96,7 +96,7 @@
                                     <p><?=$mv["text"]?></p>
                                 </div>
                             </div>
-                        <? } ?>
+                        <?php } ?>
                     </div>
 
                     <div class="allo-que-ens-mou__grid">
@@ -108,7 +108,7 @@
                                     <p><?=$allo["text"]?></p>
                                 </div>
                             </div>
-                        <? } ?>
+                        <?php } ?>
                     </div>
                 </div>
             </section>
@@ -127,7 +127,7 @@
                                     <p class="feature__text--num"><?=$impact_item["num"]?></p>
                                 </div>
                             </div>
-                        <? } ?>
+                        <?php } ?>
                     </div>
                 </div>
             </section>

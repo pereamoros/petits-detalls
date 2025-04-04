@@ -15,10 +15,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petits Detalls</title>
     <meta name="description" content="Petits Detalls">
-    <meta name="keywords" content="">
-    <meta name="author" content="Petits Detalls">
-    
-    <? include_once BASE_PATH.'/includes/head.php'; ?>
+    <meta name="robots" content="index, nofollow">
+
+    <link rel="canonical" href="https://petitsdetalls.org<?=$request?>">
+    <link rel="alternate" hreflang="ca" href="https://petitsdetalls.org<?=$correspondencies[0]?>">
+    <link rel="alternate" hreflang="es" href="https://petitsdetalls.org<?=$correspondencies[1]?>">
+    <link rel="alternate" hreflang="x-default" href="https://petitsdetalls.org<?=$correspondencies[0]?>">
+
+    <link rel="icon" href="/petits-detalls-favicon.ico" sizes="any" type="image/x-icon">
+    <link rel="stylesheet" href="/css/min-main.css">
 
 </head>
 <body>

@@ -27,6 +27,10 @@ $variables = [
     'pilar_3' => [
         'tipo' => 'texto',
         'label' => 'Pilar 3'
+    ],
+    'pilar_4' => [
+        'tipo' => 'texto',
+        'label' => 'Pilar 4'
     ]
 ];
 ?>

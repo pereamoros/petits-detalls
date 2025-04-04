@@ -1,5 +1,8 @@
 <?php
     if($idioma == "cat") {
+        $menu_inici_name = 'Inici';
+        $menu_inici_title = 'Pàgina principal de Petits Detalls';
+        $menu_inici_url = '/';
         $menu_equip_name = 'Equip';
         $menu_equip_title = 'Equip de treball de Petits Detalls';
         $menu_equip_url = '/equip';
@@ -47,6 +50,9 @@
 
     } else if($idioma == 'esp') {
         // menu principal
+        $menu_inici_name = 'Inicio';
+        $menu_inici_title = 'Página principal de Petits Detalls';
+        $menu_inici_url = '/es';
         $menu_equip_name = 'Equipo';
         $menu_equip_title = 'Equipo de trabajo de Petits Detalls';
         $menu_equip_url = '/equipo';
@@ -93,6 +99,11 @@
         $menu_colaboracions_url = '/colaboraciones';
     }
 
+    $menu_inici = [
+        'name' => $menu_inici_name,
+        'title' => $menu_inici_title,
+        'url' => $menu_inici_url
+    ];
     $menu_equip = [
         'name' => $menu_equip_name,
         'title' => $menu_equip_title,
@@ -125,6 +136,7 @@
     ];
 
     $menu = [
+        $menu_inici,
         $menu_equip,
         $menu_projectes,
         $menu_colabora,

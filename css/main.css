@@ -43,12 +43,14 @@ h1, h2, h3, h4, h5, h6 {
   src: url("./fonts/Auxilia.woff2") format("woff2"), url("./fonts/Auxilia.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Auxilia Bold";
   src: url("./fonts/Auxilia-Bold.woff2") format("woff2"), url("./fonts/Auxilia-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 b {
   font-family: var(--font-family-bold);
@@ -1412,6 +1414,33 @@ footer {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
+}
+
+.loader-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

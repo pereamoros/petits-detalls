@@ -31,7 +31,7 @@ $routes = [
     '/contacte' => ['view' => 'contacte.php', 'idioma' => 'cat', 'correspondencies' => ['/contacte', '/contacto']],
     '/contacto' => ['view' => 'contacte.php', 'idioma' => 'esp', 'correspondencies' => ['/contacte', '/contacto']],
     '/avis-legal-politica-proteccio-dades' => ['view' => 'politiques.php', 'idioma' => 'cat', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
-    '/aviso-legal-politica-proteccion-datos' => ['view' => 'politiques.php', 'idioma' => 'esp', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']],
+    '/aviso-legal-politica-proteccion-datos' => ['view' => 'politiques.php', 'idioma' => 'esp', 'correspondencies' => ['/avis-legal-politica-proteccio-dades', '/aviso-legal-politica-proteccion-datos']]
 ];
 $idioma = 'cat';
 

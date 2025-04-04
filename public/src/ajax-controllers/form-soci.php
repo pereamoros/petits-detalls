@@ -1,6 +1,6 @@
 <?php
     // print errors
-    ini_set('display_errors', 1);
+    // ini_set('display_errors', 1);
 
     // FORBIDDEN si no accedeixen al document via AJAX
     if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
@@ -79,8 +79,8 @@
                     $mail->isSMTP();
                     $mail->Host       = $_ENV['MAIL_HOST'];
                     $mail->SMTPAuth   = true;
-                    $mail->Username   = $_ENV['MAIL_USERNAME'];
-                    $mail->Password   = $_ENV['MAIL_PASSWORD'];
+                    $mail->Username   = $_ENV['MAIL_SOCI_USERNAME'];
+                    $mail->Password   = $_ENV['MAIL_SOCI_PASSWORD'];
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                     $mail->Port       = $_ENV['MAIL_PORT'];
             

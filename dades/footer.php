@@ -2,6 +2,7 @@
     if($idioma == "cat") {
         include_once(BASE_PATH.'/content/ca_footer.php');
         // constants
+        $donacio_link = "/collabora";
         $footer_menu_title_2 = 'Comunitat';
         $footer_menu_title_3 = 'Segueix-nos';
         $text_subvencio = 'Pàgina web subvencionada per:';
@@ -10,6 +11,7 @@
     } else if($idioma == 'esp') {
         include_once(BASE_PATH.'/content/es_footer.php');
         // constants
+        $donacio_link = "/colabora";
         $footer_menu_title_2 = 'Comunidad';
         $footer_menu_title_3 = 'Síguenos';
         $text_subvencio = 'Página web subvencionada por:';        

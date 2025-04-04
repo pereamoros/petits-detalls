@@ -1,6 +1,6 @@
 <?php
     // print errors
-    ini_set('display_errors', 1);
+    // ini_set('display_errors', 1);
 
     // FORBIDDEN si no accedeixen al document via AJAX
     if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {

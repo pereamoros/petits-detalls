@@ -6,14 +6,14 @@
 
     <meta property="og:title" content="<?=$meta_title?>">
     <meta property="og:description" content="<?=$meta_desc?>">
-    <meta property="og:image" content="https://petitsdetalls.org/petits-detalls-hero.webp">
+    <meta property="og:image" content="https://petitsdetalls.org/images/petits-detalls-hero.webp">
     <meta property="og:url" content="https://petitsdetalls.org">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?=$meta_title?>">
     <meta name="twitter:description" content="<?=$meta_desc?>">
-    <meta name="twitter:image" content="https://petitsdetalls.org/petits-detalls-hero.webp">
+    <meta name="twitter:image" content="https://petitsdetalls.org/images/petits-detalls-hero.webp">
 
     <link rel="canonical" href="https://petitsdetalls.org<?=$request?>">
     <link rel="alternate" hreflang="ca" href="https://petitsdetalls.org<?=$correspondencies[0]?>">
