@@ -4,6 +4,7 @@ $meta_desc = "Pàgina web oficial de l'ong Petits Detalls que porta a terme proj
 $content_h1 = "10 anys de projectes a Uganda";
 $hero_span = "Petits Detalls som una ONG que promou projectes de cooperació internacional a Uganda.";
 $hero_cta = "Col·labora";
+$hero_cta_link = "/collabora";
 $intro_text_1 = "<p><b>Petits Detalls</b> és una associació sense ànim de lucre, fundada el desembre de 2014, que es dedica a promoure projectes de <b>cooperació internacional a Uganda</b>.</p>
 <p>Els nostres projectes, que tenen com a objectiu principal promoure l'empoderament de la dona i millorar el nivell de vida de la infància i, per conseqüència, de les futures generacions, es basen en l'<b>educació</b>, el <b>desenvolupament social</b> i la <b>salut bàsica</b>.</p>
 <p>La nostra activitat es desenvolupa en zones rurals d'Uganda des d'on apostem pel desenvolupament local per garantir que tinguin un impacte real en les comunitats on treballem.</p>";

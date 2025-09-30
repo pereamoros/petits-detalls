@@ -79,15 +79,15 @@
                     $mail->isSMTP();
                     $mail->Host       = $_ENV['MAIL_HOST'];
                     $mail->SMTPAuth   = true;
-                    $mail->Username   = $_ENV['MAIL_SOCI_USERNAME'];
-                    $mail->Password   = $_ENV['MAIL_SOCI_PASSWORD'];
+                    $mail->Username   = $_ENV['MAIL_USERNAME'];
+                    $mail->Password   = $_ENV['MAIL_PASSWORD'];
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                     $mail->Port       = $_ENV['MAIL_PORT'];
             
                     // Remitente
                     $mail->setFrom($_ENV['MAIL_FROM_EMAIL'], $_ENV['MAIL_FROM_NAME']);
                     // Destinatario
-                    $mail->addAddress($_ENV['MAIL_TO_EMAIL'], $_ENV['MAIL_TO_NAME']);
+                    $mail->addAddress($_ENV['MAIL_TO_SOCI'], $_ENV['MAIL_TO_SOCI_NAME']);
             
                     // Contenido
                     $mail->isHTML(true);

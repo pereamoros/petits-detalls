@@ -1,20 +1,22 @@
 <?php
-    include_once BASE_PATH.'/dades/menu.php';
-    include_once BASE_PATH.'/dades/projectes.php';
+include_once BASE_PATH . '/dades/menu.php';
+include_once BASE_PATH . '/dades/projectes.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>    
-    <? include_once BASE_PATH.'/includes/head.php'; ?>
+
+<head>
+    <? include_once BASE_PATH . '/includes/head.php'; ?>
 </head>
+
 <body>
 
-    <? include_once BASE_PATH.'/views/partials/header.php'; ?>
+    <? include_once BASE_PATH . '/views/partials/header.php'; ?>
 
     <main>
         <section class="hero-img">
             <div class="container">
-                <h1><?=$content_h1?></h1>
+                <h1><?= $content_h1 ?></h1>
             </div>
         </section>
 
@@ -24,28 +26,30 @@
                 <div id="mapa"></div>
 
                 <div class="project__grid">
-                    <? foreach($projectes as $projecte) { ?>
-                        <div class="card" data-name="<?=$projecte["name"]?>" data-lat="<?=$projecte["lat"]?>" data-lng="<?=$projecte["lng"]?>">
+                    <? foreach ($projectes as $projecte) { ?>
+                        <div class="card" data-name="<?= $projecte["name"] ?>" data-lat="<?= $projecte["lat"] ?>"
+                            data-lng="<?= $projecte["lng"] ?>">
                             <div class="card__img">
-                                <img src="<?=$projecte["img"]?>" alt="<?=$projecte["name"]?> - Petits Detalls">
+                                <img src="<?= $projecte["img"] ?>" alt="<?= $projecte["name"] ?> - Petits Detalls">
                             </div>
                             <div class="card__text">
-                                <h3><?=$projecte["name"]?></h3>
-                                <p><?=$projecte["description"]?></p>
+                                <h3><?= $projecte["name"] ?></h3>
+                                <p><?= $projecte["description"] ?></p>
                             </div>
-                            <a href="<?=$projecte["url"]?>" class="cta cta--c2" title="<?=$projecte["name"]?>"><?=$btn_text?></a>
+                            <a href="<?= $projecte["url"] ?>" class="cta cta--c2"
+                                title="<?= $projecte["name"] ?>"><?= $btn_text ?></a>
                         </div>
                     <? } ?>
                 </div>
 
-                 
+
             </div>
         </section>
     </main>
 
-    <? include_once BASE_PATH.'/views/partials/footer.php'; ?>
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?=$_ENV['GM_API_KEY']?>&callback=initMap" async></script>
+    <? include_once BASE_PATH . '/views/partials/footer.php'; ?>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?= $_ENV['GM_API_KEY'] ?>&callback=initMap" async></script>
     <script>
         async function initMap() {
             const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
@@ -115,7 +119,7 @@
 
             poligonoBusoga.setMap(mapa);
 
-            
+
             const elementosMapa = document.querySelectorAll('.card');
             let lastClicked = null;
             let zIndexBase = 100;
@@ -151,7 +155,8 @@
             });
         }
 
-        
+
     </script>
 </body>
+
 </html>

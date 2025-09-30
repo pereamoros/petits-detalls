@@ -25,7 +25,7 @@
                     <div class="hero-video__content">
                         <h1><?=$content_h1?></h1>
                         <span><?=$hero_span?></span>
-                        <a href="/collabora" class="cta cta--t"><?=$hero_cta?></a>
+                        <a href="<?=$hero_cta_link?>" class="cta cta--t"><?=$hero_cta?></a>
                     </div>
                 </div>
             </section>

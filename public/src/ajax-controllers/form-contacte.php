@@ -76,7 +76,7 @@
                     // Remitente
                     $mail->setFrom($_ENV['MAIL_FROM_EMAIL'], $_ENV['MAIL_FROM_NAME']);
                     // Destinatario
-                    $mail->addAddress($_ENV['MAIL_TO_EMAIL'], $_ENV['MAIL_TO_NAME']);
+                    $mail->addAddress($_ENV['MAIL_TO_INFO'], $_ENV['MAIL_TO_INFO_NAME']);
             
                     // Contenido
                     $mail->isHTML(true);

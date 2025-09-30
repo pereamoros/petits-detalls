@@ -20,6 +20,10 @@ $variables = [
         'tipo' => 'texto',
         'label' => 'Text del botó'
     ],
+    'hero_cta_link' => [
+        'tipo' => 'texto',
+        'label' => 'Enllaç del botó'
+    ],
     'intro_text_1' => [
         'tipo' => 'textarea',
         'label' => 'Text d\'introducció 1'
